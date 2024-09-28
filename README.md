@@ -37,7 +37,36 @@ As the sole developer of this website, my goal is to create an intuitive experie
 |15|As a user, I would like to be able to increase difficulty so game remains engaging when I become an expert|C|N/A|As the game naturally increasing in complexity It may not be necessary|
 
 ### Design choices
-PLACE HOLDER TEXT
+This section will outline and justify design choices. 
+
+#### Themes
+The first theme for CLick It! and its default them is going to base around the animal kingdom. As an easily recognizable theme to all ages groups it should give players a sense of familiarity. In addition to being a theme with good access to copyright free media and support materials. 
+
+#### Colors
+The color scheme for the site will be as follows: 
+![Color pallet Image](assests\imgs\readmeimgs\Color-ClickIt-colors.jpeg)
+
+This color pallet gives a good coverage of background and text color combination which pass contrast tests. In addition the Greens and other neutral colors support the animal kingdom theme. 
+
+In addition to color pallet above, the main button colors for the user interface with the game mechanics will be as follows:
+![Color pallet for buttons image](assests\imgs\readmeimgs\clickit-button-color.jpeg)
+this set of colors are bold vibrant and have a good level of contrast to each other. 
+#### Iconography
+To help support the chosen theme, the button iconography included within the design are: 
+1. https://fontawesome.com/icons/hippo?f=classic&s=solid
+2. https://fontawesome.com/icons/frog?f=classic&s=solid
+3. https://fontawesome.com/icons/otter?f=classic&s=solid
+4. https://fontawesome.com/icons/crow?f=classic&s=solid
+
+Also, the logo for Click It! will be a simple computer cursor:
+- https://fontawesome.com/icons/arrow-pointer?f=classic&s=solid
+
+For the sharing features Click It! will be using:
+- https://fontawesome.com/icons/envelope?f=classic&s=solid
+- https://fontawesome.com/icons/facebook?f=brands&s=solid
+- https://fontawesome.com/icons/square-x-twitter?f=brands&s=solid
+
+
 ### Wireframes
 PLACE HOLDER TEXT
 
