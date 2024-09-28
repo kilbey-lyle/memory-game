@@ -41,7 +41,6 @@ PLACE HOLDER TEXT
 ### Wireframes
 PLACE HOLDER TEXT
 
-
 ## Features
 Click It!'s feature set is informed by the above users story and where appropriate will be linked back to a user stroy by referencing the stroy's ID. 
 ### Existing Features
