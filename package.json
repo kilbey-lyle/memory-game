@@ -1,5 +1,25 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3"
-  }
+  },
+  "name": "memory-game",
+  "description": "Click it is a memory game designed for all ages. Created and developed by Lyle Kilbey as part of Code Institutes Web App Development Qualification.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilbey-lyle/memory-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilbey-lyle/memory-game/issues"
+  },
+  "homepage": "https://github.com/kilbey-lyle/memory-game#readme"
 }

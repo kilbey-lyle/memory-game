@@ -90,6 +90,11 @@ body {
 }
 
 /*--player-buttons--*/
+button:focus {
+    border: none;
+    outline: none;
+}
+
 
 #button-container {
     margin-top: 10vh;
