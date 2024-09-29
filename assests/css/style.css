@@ -243,6 +243,10 @@ button:focus {
     color: #002E00;
 }
 
+.light {
+    opacity: 0.5;;
+}
+
 /*------Media-Queries------*/
 /*--Medimum--*/
 
