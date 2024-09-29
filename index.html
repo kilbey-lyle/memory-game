@@ -10,11 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assests/css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
         <div class="container-fluid" id="header-container">
             <div class="row bg-light-green d-flex" id="header-row">
-                <h2 class="col-2 tx-white">Click It!<i class="fa-solid fa-arrow-pointer tx-dark-green" id="logo"></i></h2>
+                <h2 class="col-10 tx-white">Click It!<i class="fa-solid fa-arrow-pointer tx-dark-green" id="logo"></i></h2>
                 <div id="setting-button-wrapper">
                     <button id="settings-cog"><i class="fa-solid fa-gear tx-black"></i></button>
                 </div>         
@@ -23,32 +23,41 @@
     </header>
         <div class="container-fluid" id="button-container">
             <div class="row d-flex">
-                <div class="col-3 spacer"></div>
-                <button class="player-bttn bttn-yellow col-3" id="bttn-otter">
+                <div class="d-sm-none d-md-block col-3 spacer"></div>
+                <button class="player-bttn bttn-yellow col-12 col-md-3" id="bttn-otter">
                     <i class="fa-solid fa-otter"></i>
                 </button>
-                <button class="player-bttn bttn-purple col-3" id="bttn-hippo">
+                <button class="player-bttn bttn-purple col-12 col-md-3" id="bttn-hippo">
                     <i class="fa-solid fa-hippo"></i>
                 </button>
             </div>
             <div class="row">
-                <div class="col-3 spacer"></div>
-                <button class="player-bttn bttn-red col-3" id="bttn-crow">
+                <div class="d-sm-none d-md-block col-3 spacer"></div>
+                <button class="player-bttn bttn-red col-12 col-md-3" id="bttn-crow">
                     <i class="fa-solid fa-crow"></i>
                 </button>
-                <button class="player-bttn bttn-blue col-3" id="bttn-frog">
+                <button class="player-bttn bttn-blue col-12 col-md-3" id="bttn-frog">
                     <i class="fa-solid fa-frog"></i>
                 </button>
             </div>
-            <div class="row d-flex">
-                <div id="score">
-
+            <div class="row" id="score-new-game-row">
+                <div class="col-12 col-md-6" id="score-wrapper">
+                    <p class="bg-dark-green tx-white">SCORE: <span class="bg-off-white tx-dark-green" id="score">0</span></p>
                 </div>
-                <div id="bttn-new-game">
-
+                <div class="col-12 col-md-6" id="new-game-wrapper">
+                    <button id="bttn-new-game" class="bg-green tx-white" >NEW GAME</button>
                 </div>
             </div>
         </div>
+    <footer class="mt-auto">
+        <div class="container-fluid">
+            <div class="row bg-light-green">
+                <button class="footer-button bg-light-green col-6"><i class="fa-brands fa-facebook"></i></button>
+                <button class="footer-button bg-light-green col-6"><i class="fa-brands fa-x-twitter"></i></button>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://kit.fontawesome.com/289e1d11d0.js" crossorigin="anonymous"></script>
 </body>
 </html>

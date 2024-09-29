@@ -152,3 +152,4 @@ The site was deployed to Git Hub pages using the following steps:
 
 ## Credits
 1. Box shadow for player buttons code sourced from [w3schools](https://www.w3schools.com/css/css3_buttons.asp).
+2. Code to fix footer to bottom of screen sourced form [Redu](https://radu.link/make-footer-stay-bottom-page-bootstrap/)
