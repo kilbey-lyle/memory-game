@@ -19,4 +19,9 @@ This section of this document will capture all bugs and their fixes found during
 |When on smaller resoultions buttons retain corner with increased border radious which looks odd|UI|Added media query which set all border radius to player buttons to 15px.|
 |Weh on smaller resolutions score and new game button has unnesscary space between player buttons, footer, and themselevs |UI|Added score and number buttons to media query to reduce top margin and increase width when below bootsrapt medimum breakponit|
 |When on smaller resoultions player button icons over spill from button|UI|Added font-size to medimum media query to reduce font size to 50px form 70px|
+|When on smaller resolutions setting button wraps onto new line|UI|Logo display set to none of xs resoltuion and lower. Decrease bootstrap column assignment, for logo and title, from 10 to 6|
+||||
+||||
+||||
+||||
 ||||

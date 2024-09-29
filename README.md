@@ -153,3 +153,9 @@ The site was deployed to Git Hub pages using the following steps:
 ## Credits
 1. Box shadow for player buttons code sourced from [w3schools](https://www.w3schools.com/css/css3_buttons.asp).
 2. Code to fix footer to bottom of screen sourced form [Redu](https://radu.link/make-footer-stay-bottom-page-bootstrap/)
+3. Pop-up modal taken from bootstrap components. [Bootstrap Documents](https://getbootstrap.com/docs/4.0/components/modal/)
+    - Edits Made
+        - Footer Removed
+        - Styling Added
+        - extra-info div sections added and styled
+        - Intergrated with Document load and settings button

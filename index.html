@@ -8,15 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./assests/css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
         <div class="container-fluid" id="header-container">
             <div class="row bg-light-green d-flex" id="header-row">
-                <h2 class="col-10 tx-white">Click It!<i class="fa-solid fa-arrow-pointer tx-dark-green" id="logo"></i></h2>
+                <h2 class="col-6 tx-white">Click It!<i class="fa-solid fa-arrow-pointer tx-dark-green d-none d-sm-inline" id="logo"></i></h2>
                 <div id="setting-button-wrapper">
-                    <button id="settings-cog"><i class="fa-solid fa-gear tx-black"></i></button>
+                    <button id="settings-cog" type="button" data-toggle="modal" data-target="#settings"><i class="fa-solid fa-gear tx-black"></i></button>
                 </div>         
             </div>
         </div>
@@ -24,10 +25,10 @@
         <div class="container-fluid" id="button-container">
             <div class="row d-flex">
                 <div class="d-sm-none d-md-block col-3 spacer"></div>
-                <button class="player-bttn bttn-yellow col-12 col-md-3" id="bttn-otter">
+                <button class="player-bttn bttn-yellow col-12 col-md-3" id="bttn-otter" data-toggle="modal" data-target="#game-over">
                     <i class="fa-solid fa-otter"></i>
                 </button>
-                <button class="player-bttn bttn-purple col-12 col-md-3" id="bttn-hippo">
+                <button class="player-bttn bttn-purple col-12 col-md-3" id="bttn-hippo" data-toggle="modal" data-target="#welcome">
                     <i class="fa-solid fa-hippo"></i>
                 </button>
             </div>
@@ -49,15 +50,108 @@
                 </div>
             </div>
         </div>
-    <footer class="mt-auto">
-        <div class="container-fluid">
-            <div class="row bg-light-green">
-                <button class="footer-button bg-light-green col-6"><i class="fa-brands fa-facebook"></i></button>
-                <button class="footer-button bg-light-green col-6"><i class="fa-brands fa-x-twitter"></i></button>
+        
+        <!-- Modal Welcome. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
+        <div class="modal fade" id="welcome" tabindex="-1" aria-labelledby="welcome pop-up" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="welcome-modal-title">WELCOME!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="instructions">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and mimic what you see. Using the button repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
+                        <div class="extra-info bg-off-white">
+                            <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
+                            <p id="show-off-text" class="tx-dark-green">Here are some options to give you even more bragging rights. why not give them a go?</p>
+                            <form id="welcome-form">
+                                <input type="checkbox" name="audioOnly" class="audioOnly">
+                                <label for="audioOnly" class="tx-dark-green">
+                                    Audio Only
+                                </label>
+                                <br>
+                                <input type="checkbox" name="shuffleButtons" class="shuffleButtons tx-dark-green">
+                                <label for="shuffleButtons" class="tx-dark-green">Random Button Shuffle</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <script src="https://kit.fontawesome.com/289e1d11d0.js" crossorigin="anonymous"></script>
-</body>
+        <!-- Modal Setings. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
+        <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings pop-up" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="settings-modal-title">SETINGS</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="instructions">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and mimic what you see. Using the button repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
+                        <div class="extra-info bg-off-white">
+                            <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
+                            <p id="show-off-text" class="tx-dark-green">Here are some options to give you even more bragging rights. why not give them a go?</p>
+                            <form id="welcome-form">
+                                <input type="checkbox" name="audioOnly" class="audioOnly">
+                                <label for="audioOnly" class="tx-dark-green">
+                                    Audio Only
+                                </label>
+                                <br>
+                                <input type="checkbox" name="shuffleButtons" class="shuffleButtons tx-dark-green">
+                                <label for="shuffleButtons" class="tx-dark-green">Random Button Shuffle</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal game over. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
+        <div class="modal fade" id="game-over" tabindex="-1" aria-labelledby="game over pop-up" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" id="game-over-modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="game-over-modal-title">GAME OVER</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="game-over-message">Sorry to hear you lost, I am sure you will do better next time... Maybe.</p>
+                        <div class="extra-info bg-green">
+                            <h6 class="extra-info-title tx-off-white" id="game-over-extra-info-title">Braging Time!</h6>
+                            <p class="share-text">Why Not let you're friends and family know how clever you are.</p>
+                            <p class="share-text">Use the links below to spread the word about your intellectual prowess - you're so clever!</p>
+                            <div class="container">
+                                <div class="row" id="link-wrapper">
+                                    <button class="link-bttn bg-green col-4" id="facebook-bttn"><i class="fa-brands fa-facebook"></i></button>
+                                    <button class="link-bttn bg-green col-4" id="x-twitter-bttn"><i class="fa-brands fa-x-twitter"></i></button>
+                                    <button class="link-bttn bg-green col-4" id="email-bttn"><i class="fa-regular fa-envelope"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="mt-auto">
+            <div class="container-fluid">
+                <div class="row bg-light-green">
+                    <button class="footer-button bg-light-green col-6"><i class="fa-brands fa-facebook"></i></button>
+                    <button class="footer-button bg-light-green col-6"><i class="fa-brands fa-x-twitter"></i></button>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://kit.fontawesome.com/289e1d11d0.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        
+    </body>
 </html>

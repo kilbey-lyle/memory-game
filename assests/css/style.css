@@ -154,6 +154,81 @@ body {
     margin-bottom: 5px;
 }
 
+/*------Modals------*/
+/*--welcome and settings--*/
+.modal-content {
+    background-color: #4d6b14;
+    color:#fafff5;
+    text-align: center;
+}
+
+.close {
+    font-size: 50px;
+    color:#FA211E;
+    line-height: none;
+    text-shadow: none;
+}
+.modal-header .close {
+    padding: 5px 16px 0px 0px;
+}
+
+.extra-info {
+    border-radius: 15px;
+}
+
+.extra-info-title {
+    padding-top: 5px;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+#welcome-form input {
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+/*--game over--*/
+
+.link-wrapper button {
+    border: none;
+    font-size: 45px;
+}
+
+#facebook-bttn {
+    color: #1eedfa;
+    border-radius: 15px;
+}
+
+#x-twitter-bttn {
+    color: #AF1EFA;
+    
+}
+
+#email-bttn {
+    color: #EDDE07;
+    border-radius: 15px;
+}
+
+#game-over-modal-content {
+    background-color: #fafff5;
+    color:  #4d6b14;
+    text-align: center;
+}
+
+#game-over-extra-info-title {
+    color: #fafff5;
+}
+
+#game-over-modal-content .share-text{
+    color: #fafff5;
+}
+
+.link-bttn {
+    border: none;
+    font-size: 45px;
+}
+
+
 /*--footer--*/
 
 .footer-button {
@@ -206,3 +281,4 @@ body {
         
     }
 }
+
