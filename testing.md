@@ -1,15 +1,18 @@
 # Testing
 ## Test Environment
-Automation testing will be done use the jest frame. The project was enabled ot use jest using the following steps:
+Automation testing will be done use the jest frame. The project was enabled to use jest using the following steps:
 1. Initialise environment using Node Package Manager (npm)
     - In the project directory, run the command 'npm init'
     - Leave all fields as defaults expect 'test command' which should be set as jest
 2. Install jest
     - In the project directory, run the command 'npm --save-dev jest'
 
-To run the automation test suite a developer should
+To run the automation test suite a developer should:
 1. In terminal, go to project directory
 2. Run the command 'npm test'
+
+### Automation Testing
+
 
 ### Manual Testing
 there will be two stages to manual testing. The first stage will be manual testing during development. The second will be a round of manual testing completed after dev completion.
