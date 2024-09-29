@@ -1,0 +1,83 @@
+/*------set-font------*/
+body {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*------colors------*/
+/*--main-colors--*/
+
+.bg-black {
+    background-color: #000000;
+}
+
+.bg-dark-green {
+    background-color: #002E00;
+}
+
+.bg-green {
+    background-color: #4d6b14;
+}
+
+.bg-light-green {
+    background-color: #9DB99D;
+}
+
+.bg-white {
+    background-color: #fafff5;
+}
+
+.tx-black {
+    color: #000000;
+}
+
+.tx-dark-green {
+    color: #002E00;
+}
+
+.tx-green {
+    color: #4d6b14;
+}
+
+.tx-light-green {
+    color: #9DB99D;
+}
+
+.tx-white {
+    color: #fafff5;
+}
+
+/*--button-colors--*/
+.bttn-red {
+    background-color: #FA211E;
+}
+
+.bttn-purple {
+    background-color: #AF1EFA;
+}
+
+.bttn-blue {
+    background-color: #1eedfa;
+}
+
+.bttn-yellow {
+    background-color: #EDDE07;
+}
+
+/*------Main Game Page------*/
+/*--header--*/
+
+#logo {
+    font-size: 35px;
+    padding: 10px;
+}
+
+#settings-cog {
+    font-size: 35px;
+    margin: 10px;
+    border:#9DB99D;
+    background-color: #9DB99D;
+    margin-right: 5px;
+}
