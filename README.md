@@ -16,7 +16,7 @@ A player will be motivated to visit Click It! to show their short-term memory pr
 Build a simple single-player memory game. Using available social media and email API's to allow users to quickly and easily share their score from each round attempted. 
 
 ### User Stories
-As the sole developer of this website, my goal is to create an intuitive experience for a user that they will remember. The following points are applicable to the users of the site and have been given a priority using the MoSCoW Method. Classification of ranking used can be found [here](https://sax1johno.medium.com/prioritizing-your-user-stories-with-the-moscow-method-8bf42d427da6).
+As the sole developer of this website, my goal is to create an intuitive experience for a user that they will remember. The following points are applicable to the users of the site and have been given a priority using the MoSCoW Method. Classification of ranking used can be found [here](https://sax1johno.medium.com/prioritizing-your-user-stories-with-the-moscow-method-8bf42d427da6). The use of MoDCoW creates Prioritization of task and will dedicate the order of development.  
 
 |ID|User Story|MoSCoW Ranking|Evidence of Implementation|Notes/Ranking justifications|
 |-| ------------------------- |:-------:| -----|---|
@@ -94,7 +94,7 @@ Click It!'s feature set is informed by the above users story and where appropria
         - The desired affect would be to follow the branding philosophy set by duolingo's mascot. Further information on this can be found [here](https://www.kimp.io/duolingo-logo/#gba37fe8cb1d9)
     - Is the character the player is 'playing against'
     - Adds text commentary throughout the game
-        - Language used in commentary become more confident he is going to win as the game progresses and increases in complexity
+        - Language used in commentary becomes more confident he is going to win as the game progresses and increases in complexity
 - Score sharing (*User Story ID: 1, 2, 3, 12*)
     - opportunity to share given to players at the end of each session
     - will give options of facebook and email sharing
@@ -130,7 +130,6 @@ The site was deployed to Git Hub pages using the following steps:
 3. In the Build and Deployment section for Source, select 'Deploy from a branch' from the drop-down list
 4. For Branch, select 'main' from the drop-down list and Save
 5. On the top of the page, the link to the complete website is provided
-7. Link updated to ''
 6. The deployed site will update automatically upon new pushes to the main branch
 
 ## Credits
