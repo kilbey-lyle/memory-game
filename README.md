@@ -151,3 +151,4 @@ The site was deployed to Git Hub pages using the following steps:
 6. The deployed site will update automatically upon new pushes to the main branch
 
 ## Credits
+1. Box shadow for player buttons code sourced from [w3schools](https://www.w3schools.com/css/css3_buttons.asp).

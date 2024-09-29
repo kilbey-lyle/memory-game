@@ -13,17 +13,42 @@
 <body>
     <header>
         <div class="container-fluid" id="header-container">
-            <div class="row bg-light-green">
+            <div class="row bg-light-green d-flex" id="header-row">
                 <h2 class="col-2 tx-white">Click It!<i class="fa-solid fa-arrow-pointer tx-dark-green" id="logo"></i></h2>
-                <div class="setting-button-wrapper col-10">
+                <div id="setting-button-wrapper">
                     <button id="settings-cog"><i class="fa-solid fa-gear tx-black"></i></button>
                 </div>         
             </div>
         </div>
     </header>
+        <div class="container-fluid" id="button-container">
+            <div class="row d-flex">
+                <div class="col-3 spacer"></div>
+                <button class="player-bttn bttn-yellow col-3" id="bttn-otter">
+                    <i class="fa-solid fa-otter"></i>
+                </button>
+                <button class="player-bttn bttn-purple col-3" id="bttn-hippo">
+                    <i class="fa-solid fa-hippo"></i>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-3 spacer"></div>
+                <button class="player-bttn bttn-red col-3" id="bttn-crow">
+                    <i class="fa-solid fa-crow"></i>
+                </button>
+                <button class="player-bttn bttn-blue col-3" id="bttn-frog">
+                    <i class="fa-solid fa-frog"></i>
+                </button>
+            </div>
+            <div class="row d-flex">
+                <div id="score">
 
+                </div>
+                <div id="bttn-new-game">
 
-
+                </div>
+            </div>
+        </div>
     <script src="https://kit.fontawesome.com/289e1d11d0.js" crossorigin="anonymous"></script>
 </body>
 </html>

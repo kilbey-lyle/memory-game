@@ -11,8 +11,8 @@ This section of this document will capture all bugs and their fixes found during
 
 |Bug|Area|Fix|
 |---|---|---|
-||UI||
-||Main Game||
+|Settings button would not allign to right hand size of screen [image of bug](assests/imgs/readmeimgs/bug-settings-button.png)|UI|justify-content: space-between; to header row. Id for header road created and css styling added.|
+|Adding margin to player buttons cause bootsrapt offset class to be overwirtten.|UI|Spacer div added to replace ofset. Spacer div given display none when on smaller device screens as button do not need to be centered. |
 ||Facebook share||
 ||||
 ||||

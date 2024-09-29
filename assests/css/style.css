@@ -68,7 +68,6 @@ body {
 
 /*------Main Game Page------*/
 /*--header--*/
-
 #logo {
     font-size: 35px;
     padding: 10px;
@@ -79,5 +78,47 @@ body {
     margin: 10px;
     border:#9DB99D;
     background-color: #9DB99D;
-    margin-right: 5px;
+    text-align: right;
 }
+
+#header-container h2 {
+    margin:10px 0px 10px 0px;
+}
+
+#header-row {
+    justify-content: space-between;
+}
+
+/*--buttons--*/
+
+#button-container {
+    margin-top: 10vh;
+}
+
+.player-bttn {
+    height: 25vh;
+    margin: 5px;
+    /*Credit for box shadow to w3school*/
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: none;
+    font-size: 70px;
+    color: #fafff5;
+}
+
+#bttn-otter {
+    border-radius: 60px 15px 15px 15px;
+}
+
+#bttn-hippo {
+    border-radius: 15px 60px 15px 15px;
+}
+
+#bttn-frog {
+    border-radius: 15px 15px 60px 15px;
+}
+
+#bttn-crow {
+    border-radius: 15px 15px 15px 60px;
+}
+
+
