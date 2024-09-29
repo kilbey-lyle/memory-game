@@ -68,7 +68,25 @@ For the sharing features Click It! will be using:
 
 
 ### Wireframes
-PLACE HOLDER TEXT
+Click It!'s design is based of a simple main game screen, with 3 pop-up variants. A full copy of this project's wireframes can be found [here](assests\imgs\readmeimgs\clickitWireframes.pdf).
+
+#### Main Game Screen
+![Main Game Screen wireframe](assests\imgs\readmeimgs\mainGameScreen.png)
+This is a simple page that player will be able to navigate to once they have dismissed the welcome pop up.
+
+It consists of a header, containing Click It! name, logo, and a cog icon which open setting when pressed. Then the main game buttons which are used to illustrate and input the computer and player sequence's. A score counter and a new game button which starts a new game if one is not already in progress. 
+
+#### Welcome Page
+![welcome page wireframe](assests\imgs\readmeimgs\welcomePage.png)
+This shows once the document is ready and is the first thing the user sees. It give basic instructions on how to play the game. In addition to a form of check boxes, allowing the user increase or decrease difficulty.
+
+#### Setting Page
+![Setting page wireframe](assests\imgs\readmeimgs\settingPage.png)
+To aid in player ease, the setting page looks very similar to the welcome page. It explains to rules of the game. In addition to a form of check boxes, allowing the user increase or decrease difficulty.
+
+#### Game Over Page
+![Game Over Page wireframe](assests\imgs\readmeimgs\gameOverPage.png)
+A simple page inverse the colors used in all other pop-ups. It use the game button colors to draw attention to the share features built into Click it!. In hopes of encouraging the users to share starting the family competition.  
 
 ## Features
 Click It!'s feature set is informed by the above users story and where appropriate will be linked back to a user stroy by referencing the stroy's ID. 
