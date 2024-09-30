@@ -10,7 +10,7 @@ if (
     globalThis.TextDecoder = utils.TextDecoder;
     globalThis.Uint8Array = Uint8Array;
 }
-const { game, player, newTurn, checkLastMove, updateScore } = require("./game");
+const { game, player, newTurn, checkLastMove, updateScore, gameOver } = require("./game");
 const { JSDOM } = require("jsdom");
 let fs = require("fs");
 
@@ -100,3 +100,19 @@ describe ("Update score", () => {
         expect(document.getElementById('score').textContent).toBe("10");
     });
 })
+
+/**
+describe ("gameOver Function", () => {
+    beforeEach(() => {
+        game.isComputerTurn = false;
+
+        //gameOver();
+    });
+    afterEach(() => {
+        
+    });
+    test("Should reset default to is computer turn", () => {
+         expect(game.isComputerTurn).toBe(true);
+    });
+});
+*/

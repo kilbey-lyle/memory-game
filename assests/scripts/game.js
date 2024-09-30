@@ -54,11 +54,17 @@ window.onload = function exampleFunction(){
 
     //add event listener for form submit
     form.addEventListener('submit', (e) => {
+        //stop page and form data refresh
+        e.preventDefault();
+        //change submit button text to sent
+        document.getElementById('email-submit').value = "Sent!";
+        setTimeout(() => {
+            document.getElementById('email-submit').value = "Submit";
+        }, 3000)
+        
         //initialise email data array
         let data = [];
         
-        //stop page and form data refresh
-        e.preventDefault();
 
         //create data Constructor with form data
         const formData = new FormData(form);
@@ -190,5 +196,5 @@ function facebookShare() {
     
 }
 
-module.exports = { game, player, newTurn, checkLastMove, updateScore };
+module.exports = { game, player, newTurn, checkLastMove, updateScore, gameOver };
 

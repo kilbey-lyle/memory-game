@@ -255,12 +255,13 @@ button:focus {
 }
 
 .form-input[type='submit']:hover {
-    background-color: #4d6b14;
-    border: 1px solid #4d6b14;
+    background-color: #fafff5;
+    border: 1px solid #fafff5;
+    color: #002E00;
 }
 
 .form-input:hover {
-    border: 2px solid #002E00;
+    border: 1px solid #002E00;
 }
 
 .form-label {

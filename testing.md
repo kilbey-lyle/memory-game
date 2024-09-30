@@ -22,7 +22,7 @@ This section of this document will capture all bugs and their fixes found during
 
 |Bug|Area|Fix|
 |---|---|---|
-|Settings button would not allign to right hand size of screen [image of bug](assests/imgs/readmeimgs/bug-settings-button.png)|UI|justify-content: space-between; to header row. Id for header road created and css styling added.|
+|Settings button would not allign to right hand size of screen [image of bug](assests/imgs/readmeimgs/bug-settings-button.png)|UI|Applied justify-content: space-between; to header row. Id for header road created and css styling added.|
 |Adding margin to player buttons cause bootsrapt offset class to be overwirtten.|UI|Spacer div added to replace ofset. Spacer div given display none when on smaller device screens as button do not need to be centered. |
 |New game button not centering|UI|New game button was not centering when margin set to '0 auto'. Diplsay property of new game button updated to block.|
 |Footer does not stick to bottom of page.|UI|Body element had bootstrap classes added which create a flex coloum equal to the 100% of the veiw port. Foot then has margin-top set to auto which push the footer to the bottom of the page. Credits refernece No. 2|
@@ -31,20 +31,15 @@ This section of this document will capture all bugs and their fixes found during
 |Weh on smaller resolutions score and new game button has unnesscary space between player buttons, footer, and themselevs |UI|Added score and number buttons to media query to reduce top margin and increase width when below bootsrapt medimum breakponit|
 |When on smaller resoultions player button icons over spill from button|UI|Added font-size to medimum media query to reduce font size to 50px form 70px|
 |When on smaller resolutions setting button wraps onto new line|UI|Logo display set to none of xs resoltuion and lower. Decrease bootstrap column assignment, for logo and title, from 10 to 6|
-|New Game button need disabinling|||
-|All light runign on at same time|||
-|Icon within button breaking split|||
-|event listen in funciton create multiple clikc for a single user click|||
-|score updating only increasing score so gameover never cleared score even tho reset|||
-|Player able to press button and get a reponse during computer turn. incorrectly placed playerturn in a postion where it was excuted before show sequenmce has finsihed. state change during interval clearing so will be chnage once animations are done. |||
-|on submit causes 405 errors. Added submit event listener|||
-|unable to get feild values so created formdata contrusture|||
-|submit button not syaing sent. |||
-|avle to submit non email into email feild. Type updated from text to email|||
-|Change of type of email input means lost style|||
-|Calling model when model a model is open creates overlap of modals|||
-||||
-||||
-||||
-||||
-||||
+|Player able to start a new turn during game at nay time by pressing new game button|bug|Added line to remove onclick attribute after first call of new turn. onclick attribute set back to newTurn during game over clean up.|
+|During show current sequence all buttons part of current sequence light at the same time|bug|Issue caused by incorrect use of timeout function. Code refactor to split function into two. func 1 handles the adding and removing of the light class using the itmeout funciton. func 2 loop thourgh current sequence using set interval function. Loop calls func 1. this solves the bug does create a dependency where set interval time param must be longer than the time param used in the timeout function used in func 1.|
+|Clicking on button sometimes result in a split error from player button event listener|bug| This was caused when a user click on the button icon instead of button itself. Logic added to handle error in event listener function. this logic check for an error when splitting ID of element target by user. If error get ID of parent element, the button, instead and continue.|
+|Clicking on a button once cause multiple calls to event listner function|bug|This was cause by the event listner being added during a loop so multiple listner were added to a single element. To solve this failure mode events listners moves out of loop into and into a function trigger when document loaded|
+|Score does not update on game over|bug|Although score was reset to zero on game object update score was never call so score was never updated in the DOM|
+|Player able to click player button during showing off turns causing game logic to break|bug|the issue here was created by the setting of 'isComputerTurn' being placed in the new turn function after show sequence. Show sequence operates async so isComputerturn was set to false immediately allowing users to click buttons. To solve this the setting of false to computer turn was moved to the show sequence function at the ponit set interval is clear menaing the setting of false happens at the same time as the player turn starts|
+|completeing email form takes user to unstyled 405 page|bug|the use of method post attributes on the form caused 405 errors. To fix this rather than using the inbuilt onsubmit attribute an event listener was added to the form for the submit event and perform the same funcitonailty|
+|email not recievced after adding event listner|bug|due to change in submit event handling form details where no longer passed to emailShare func. To solve this prevent default were added to share email function to stop form clearing values. Then a data constructor  was used to capture form data.|
+|submit button not syaing sent|bug|line added to submit event listner to set change button text to sent. then timeout funciton used ot change back to submit.|
+|User able to add non email to email address feild|bug|input type updated to email|
+|email input lost styling|bug|this happen due to the change of input type. email input type added to css rules|
+|Possible to have overlapping modals|bug|events listners added to the calling of modal rather that data-target attribute. than uses jquery to invoke modal show/hide for the relevant modals.|
