@@ -15,6 +15,8 @@ let player = {
 //runGame
 function newTurn() {
     game.isComputerTurn = true;
+    //disable new game button
+    document.getElementById('bttn-new-game').onclick = null;
     //add a turn to the current Sequence
     game.currentSequence.push(game.buttonNames[Math.floor(Math.random()*game.buttonNames.length)]);
     //show the player the current sequence
@@ -23,26 +25,8 @@ function newTurn() {
 }
 
 function playerTurn() {
-    game.isComputerTurn = false
-    if (!game.eventListenersAdded){
-        for (let button of document.getElementsByClassName('player-bttn')) {
-            button.addEventListener('click', (e) => {
-                if (!game.isComputerTurn){
-                    player.lastMove = e.target.getAttribute('id').split('-')[1];
-                    player.movesThisTurn =+ 1;
-                    if (!checkLastMove()){
-                        gameOver();
-                    } else {
-                        player.lastMove = '';
-                        player.movesThisTurn = 0;
-                        updateScore();
-                        newTurn();
-                    }
-                }
-            })
-        }
+    game.isComputerTurn = false  
     }
-}
 
 function checkLastMove() {
     if (player.lastMove === game.currentSequence[player.movesThisTurn - 1]){
@@ -56,13 +40,16 @@ function addAndRemoveLightClass(button){
     document.getElementById(`bttn-${button}`).classList.add('light');
     setTimeout(() => {
         document.getElementById(`bttn-${button}`).classList.remove('light')
-    }, 500);
+    }, 400);
 }
 
 function gameOver () {
     game.isComputerTurn = true;
     game.score = 0;
+    updateScore();
     game.currentSequence = [];
+
+    document.getElementById('bttn-new-game').setAttribute('onclick', 'newTurn()');
 
     player.lastMove = '';
     player.movesThisTurn = 0;
@@ -78,20 +65,37 @@ function showCurrentSequence(currentSequence){
         if (i >= currentSequence.length){
             clearInterval(loop);
         }
-    }, 700);
+    }, 600);
 }
 
 function updateScore() {
-    game.score =+ 1;
-    console.log(game.score);
+    document.getElementById('score').textContent = game.score;
 }   
-            
-            
-                // if input doesn't equal currentSequence gameOver
-                    //reset game values
-                    //trigger gameoverpopUp
-                //if no incorrect input before end of list newTurn
-                    //updateScore to plus 1
-                    //runGame
 
+for (let button of document.getElementsByClassName('player-bttn')) {
+    button.addEventListener('click', (e) => {
+        if (!game.isComputerTurn) {
+            let buttonID = e.target.getAttribute('id');
+            if (buttonID == null){
+                buttonID = e.target.parentElement.getAttribute('id');
+            }
+            player.lastMove = buttonID.split('-')[1];
+            addAndRemoveLightClass(player.lastMove);
+            player.movesThisTurn = player.movesThisTurn + 1;
+            if (checkLastMove()){
+                if (player.movesThisTurn >= game.currentSequence.length){
+                    console.log('move corrcet turn complete');
+                    player.lastMove = '';
+                    player.movesThisTurn = 0;
+                    game.score++;
+                    updateScore();
+                    newTurn();
+                }
+            } else {
+                console.log('move incorrect')
+                gameOver();
+            }
+        }
+    })
+}
 
