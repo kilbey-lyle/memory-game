@@ -58,6 +58,7 @@ window.onload = function exampleFunction(){
         e.preventDefault();
         //change submit button text to sent
         document.getElementById('email-submit').value = "Sent!";
+        //change it back agai after 3 seconds
         setTimeout(() => {
             document.getElementById('email-submit').value = "Submit";
         }, 3000)

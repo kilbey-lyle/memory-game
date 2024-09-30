@@ -11,14 +11,14 @@ To run the automation test suite a developer should:
 1. In terminal, go to project directory
 2. Run the command 'npm test'
 
-### Automation Testing
+## Automation Testing
+The goal of automation testing on this project will be to capture regression in the code base. after each milestone of funcitoailty unit test will be run to ensure all test passed. If a test fails, it will be address before moving on to new funcitonailty. This will create a stable development enviroment to continue work whilst minimising the risk of regression in the code base.
 
+## Manual testing
+The goal on manual testing on this project will be to cover any missed use cases of the app not covered by unit test and to identify any use cases which need to be covered by unit tests. 
 
-### Manual Testing
-there will be two stages to manual testing. The first stage will be manual testing during development. The second will be a round of manual testing completed after dev completion.
-
-#### Development Testing
-This section of this document will capture all bugs and their fixes found during the development cycle. 
+## Development Testing
+This section of this document will capture all bugs and their fixes found during the development cycle. Bugs found were captured via both manual and automation testing process.
 
 |Bug|Area|Fix|
 |---|---|---|
@@ -43,3 +43,27 @@ This section of this document will capture all bugs and their fixes found during
 |User able to add non email to email address feild|bug|input type updated to email|
 |email input lost styling|bug|this happen due to the change of input type. email input type added to css rules|
 |Possible to have overlapping modals|bug|events listners added to the calling of modal rather that data-target attribute. than uses jquery to invoke modal show/hide for the relevant modals.|
+
+## Validator Testing
+
+### HTML [Validator Used](https://validator.w3.org/)
+![validator photo](assests/imgs/readmeimgs/html-val-1.png)
+![validator photo](assests/imgs/readmeimgs/html-val-2.png)
+![validator photo](assests/imgs/readmeimgs/html-val-3.png)
+
+Errors address by updating modal id to include modal types. In addtion to giving correct aria labels to modal using same modal type.
+
+![validator photo](assests/imgs/readmeimgs/html-val-complete.png)
+
+### CSS [validator Used](https://jigsaw.w3.org/css-validator/)
+
+![validator photo](assests/imgs/readmeimgs/css-val-1.png)
+Line height set to 0 rather than none. inital removed however this allowed for default bootsrap line height to be applied - line height was then updated to 0.
+![validator photo](assests/imgs/readmeimgs/css-val-complete.png)
+
+### Java Script [Valdator Used](https://jshint.com/) 
+![validator photo](assests/imgs/readmeimgs/js-val-complete.png)
+<br>
+All warnings in relation to the use of ES6 required funcitonailty. No action need due to increased browser support of ES6. Exmaple warning below. 
+<br>
+![validator photo](assests/imgs/readmeimgs/js-val-exmaple-warning.png)
