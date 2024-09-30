@@ -67,3 +67,11 @@ Line height set to 0 rather than none. inital removed however this allowed for d
 All warnings in relation to the use of ES6 required funcitonailty. No action need due to increased browser support of ES6. Exmaple warning below. 
 <br>
 ![validator photo](assests/imgs/readmeimgs/js-val-exmaple-warning.png)
+
+### Light House Validator
+![validator photos](assests/imgs/readmeimgs/lh-val-1.png)
+![validator photos](assests/imgs/readmeimgs/lh-val-2.png)
+<br>
+Issue with aria labels on buttons. Labels added to Player buttons, Settings Button and Share butttons contained in footer. Contrast issue remains as only impacting Click It! title
+<br>
+![validator photos](assests/imgs/readmeimgs/lh-val-complete.png)

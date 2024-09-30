@@ -28,7 +28,7 @@
             <div class="row bg-light-green d-flex" id="header-row">
                 <h2 class="col-6 tx-white">Click It!<i class="fa-solid fa-arrow-pointer tx-dark-green d-none d-sm-inline" id="logo"></i></h2>
                 <div id="setting-button-wrapper">
-                    <button id="settings-cog" type="button" data-toggle="modal" data-target="#settings"><i class="fa-solid fa-gear tx-black"></i></button>
+                    <button id="settings-cog" type="button" data-toggle="modal" data-target="#settings" aria-label="settings-button"><i class="fa-solid fa-gear tx-black"></i></button>
                 </div>         
             </div>
         </div>
@@ -39,19 +39,19 @@
         <div class="container-fluid" id="button-container">
             <div class="row d-flex">
                 <div class="d-sm-none d-md-block col-3 spacer"></div>
-                <button class="player-bttn bttn-yellow col-12 col-md-3" id="bttn-otter">
+                <button class="player-bttn bttn-yellow col-12 col-md-3" id="bttn-otter" aria-label="otter-button">
                     <i class="fa-solid fa-otter"></i>
                 </button>
-                <button class="player-bttn bttn-purple col-12 col-md-3" id="bttn-hippo">
+                <button class="player-bttn bttn-purple col-12 col-md-3" id="bttn-hippo" aria-label="hippo-button">
                     <i class="fa-solid fa-hippo"></i>
                 </button>
             </div>
             <div class="row">
                 <div class="d-sm-none d-md-block col-3 spacer"></div>
-                <button class="player-bttn bttn-red col-12 col-md-3" id="bttn-crow">
+                <button class="player-bttn bttn-red col-12 col-md-3" id="bttn-crow" aria-label="crow-button">
                     <i class="fa-solid fa-crow"></i>
                 </button>
-                <button class="player-bttn bttn-blue col-12 col-md-3" id="bttn-frog">
+                <button class="player-bttn bttn-blue col-12 col-md-3" id="bttn-frog" aria-label="frog-button">
                     <i class="fa-solid fa-frog"></i>
                 </button>
             </div>
@@ -60,7 +60,7 @@
                     <p class="bg-dark-green tx-white">SCORE: <span class="bg-off-white tx-dark-green" id="score">0</span></p>
                 </div>
                 <div class="col-12 col-md-6" id="new-game-wrapper">
-                    <button id="bttn-new-game" class="bg-green tx-white" onclick="newTurn()">NEW GAME</button>
+                    <button id="bttn-new-game" class="bg-green tx-white" onclick="newTurn()" aria-label="new-turn-button">NEW GAME</button>
                 </div>
             </div>
         </div>
@@ -190,8 +190,8 @@
         <footer class="mt-auto">
             <div class="container-fluid">
                 <div class="row bg-light-green">
-                    <button class="footer-button bg-light-green col-6" onclick="facebookShare()"><i class="fa-brands fa-facebook"></i></button>
-                    <button class="footer-button bg-light-green col-6" data-toggle="modal" data-target="#email-modal"><i class="fa-regular fa-envelope"></i></button>
+                    <button class="footer-button bg-light-green col-6" onclick="facebookShare()" aria-label="facebook-button"><i class="fa-brands fa-facebook"></i></button>
+                    <button class="footer-button bg-light-green col-6" data-toggle="modal" data-target="#email-modal" aria-label="email-button"><i class="fa-regular fa-envelope"></i></button>
                 </div>
             </div>
         </footer>
