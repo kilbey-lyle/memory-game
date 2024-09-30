@@ -82,6 +82,35 @@ function facebookShare() {
     
 }
 
+async function sendEmail() {
+    const brevo = require('@getbrevo/brevo');
+    let defaultClient = brevo.ApiClient.instance;
+    
+    let apiKey = defaultClient.authentications['apiKey'];
+    apiKey.apiKey = 'YOUR API KEY';
+    
+    let apiInstance = new brevo.TransactionalEmailsApi();
+    let sendSmtpEmail = new brevo.SendSmtpEmail();
+    
+    sendSmtpEmail.subject = "My {{params.subject}}";
+    sendSmtpEmail.htmlContent = "<html><body><h1>Common: This is my first transactional email {{params.parameter}}</h1></body></html>";
+    sendSmtpEmail.sender = { "name": "John", "email": "example@example.com" };
+    sendSmtpEmail.to = [
+      { "email": "example@brevo.com", "name": "sample-name" }
+    ];
+    sendSmtpEmail.replyTo = { "email": "example@brevo.com", "name": "sample-name" };
+    sendSmtpEmail.headers = { "Some-Custom-Name": "unique-id-1234" };
+    sendSmtpEmail.params = { "parameter": "My param value", "subject": "common subject" };
+    
+    
+    apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
+      console.log('API called successfully. Returned data: ' + JSON.stringify(data));
+    }, function (error) {
+      console.error(error);
+    });
+}
+
+
 for (let button of document.getElementsByClassName('player-bttn')) {
     button.addEventListener('click', (e) => {
         if (!game.isComputerTurn) {
@@ -109,5 +138,5 @@ for (let button of document.getElementsByClassName('player-bttn')) {
     })
 }
 
-module.exports = { game };
+export default { game };
 
