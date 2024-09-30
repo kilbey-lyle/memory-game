@@ -233,6 +233,38 @@ button:focus {
     font-size: 45px;
 }
 
+/*--email modal--*/
+.form-input {
+    margin: 5px;
+    background-color: #fafff5;
+    border: 1px solid #002E00;
+    border-radius: 15px;
+}
+
+.form-input[type='submit'] {
+    width: 100%;
+    background-color: #002E00;
+    color: #fafff5;
+}
+
+.form-input[type='text'] {
+    color:#002E00;
+}
+
+.form-input[type='submit']:hover {
+    background-color: #4d6b14;
+    border: 1px solid #4d6b14;
+}
+
+.form-input:hover {
+    border: 2px solid #002E00;
+}
+
+.form-label {
+    font-size: 18px;
+}
+
+
 
 /*--footer--*/
 

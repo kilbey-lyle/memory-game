@@ -113,5 +113,13 @@ function facebookShare() {
     
 }
 
+function emailShare(form) {
+    emailjs.send("service_eduzpyv","template_hgeoi5r",{
+        to_email: "lyle.kilbey98@gmail.com",
+        player_name: "lyle",
+        score: "2",
+        });
+}
+
 module.exports = { game, player };
 

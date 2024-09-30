@@ -148,12 +148,40 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal send email. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
+        <div class="modal fade" id="email-modal" tabindex="-1" aria-labelledby="game over pop-up" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" id="game-over-modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="game-over-modal-title">EMAIL TIME</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="extra-info">
+                            <p>Wanna Brag to a friend? Enter your name and their email and we'll handle the rest.</p>
+                            <form id="form-modal" onsubmit="return emailShare(this);" method="post">
+                                <label for="name" class="form-label">Name: </label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                                <br>
+                                <label for="email" class="form-label">Email: </label>
+                                <input type="text" id="email" name="email" class="form-input" required>
+                                <br>
+                                <input type="submit" class="form-input">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <footer class="mt-auto">
             <div class="container-fluid">
                 <div class="row bg-light-green">
                     <button class="footer-button bg-light-green col-6" onclick="facebookShare()"><i class="fa-brands fa-facebook"></i></button>
-                    <button class="footer-button bg-light-green col-6" onclick="facebookShare()"><i class="fa-regular fa-envelope"></i></button>
+                    <button class="footer-button bg-light-green col-6" data-toggle="modal" data-target="#email-modal"><i class="fa-regular fa-envelope"></i></button>
                 </div>
             </div>
         </footer>
@@ -162,6 +190,15 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
         <script type="text/javascript" src="assests/scripts/game.js"></script>
-
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "NMysIGh66f5ASQ-TM",
+    });
+    })();
+</script>
     </body>
 </html>
