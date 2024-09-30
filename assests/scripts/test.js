@@ -10,7 +10,7 @@ if (
     globalThis.TextDecoder = utils.TextDecoder;
     globalThis.Uint8Array = Uint8Array;
 }
-const { game, player, newTurn } = require("./game");
+const { game, player, newTurn, checkLastMove } = require("./game");
 const { JSDOM } = require("jsdom");
 let fs = require("fs");
 
@@ -58,9 +58,7 @@ describe ("New Turn initiatation", () => {
         newTurn();
     });
     afterEach(() => {
-        game.score = 0;
         game.currentSequence = [];
-        game.buttonNames = ['otter','hippo','frog','crow'];
         game.isComputerTurn = true;
     });
     test("Set comptuer turn to true", () => {
@@ -75,6 +73,25 @@ describe ("New Turn initiatation", () => {
     test("Move added to current sequence", () => {
         expect(game.currentSequence.length).toBe(1);
     });
+})
+
+describe ("Check move function", () => {
+    beforeEach(() => {
+        player.lastMove = 'hippo'
+        player.movesThisTurn = 1;
+    });
+    afterEach(() => {
+        game.currentSequence = [];
+    });
+    test("if move matches return true", () => {
+         game.currentSequence.push('hippo');
+         expect(checkLastMove('hippo')).toBe(true);
+    });
+    test("if move doesn't matche return false", () => {
+        game.currentSequence.push('hippo');
+        console.log(game.currentSequence);
+        expect(checkLastMove('frog')).toBe(false);
+   });
 })
 
 

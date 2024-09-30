@@ -30,7 +30,7 @@ window.onload = function exampleFunction(){
                 addAndRemoveLightClass(player.lastMove);
                 //increase player move this turn for later comparion
                 player.movesThisTurn = player.movesThisTurn + 1;
-                if (checkLastMove()){
+                if (checkLastMove(player.lastMove)){
                     //check if player has made all needed guesses for this round
                     if (player.movesThisTurn >= game.currentSequence.length){
                         //turn complete with no mistakes
@@ -146,8 +146,8 @@ function addAndRemoveLightClass(button){
 /**
  * compares lastMove string in player object to equivently move in currentSequence
  */
-function checkLastMove() {
-    if (player.lastMove === game.currentSequence[player.movesThisTurn - 1]){
+function checkLastMove(playerMove) {
+    if (playerMove === game.currentSequence[player.movesThisTurn - 1]){
         return true;
     } else {
         return false;
@@ -190,5 +190,5 @@ function facebookShare() {
     
 }
 
-module.exports = { game, player, newTurn };
+module.exports = { game, player, newTurn, checkLastMove };
 
