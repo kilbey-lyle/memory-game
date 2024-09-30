@@ -31,6 +31,13 @@ This section of this document will capture all bugs and their fixes found during
 |Weh on smaller resolutions score and new game button has unnesscary space between player buttons, footer, and themselevs |UI|Added score and number buttons to media query to reduce top margin and increase width when below bootsrapt medimum breakponit|
 |When on smaller resoultions player button icons over spill from button|UI|Added font-size to medimum media query to reduce font size to 50px form 70px|
 |When on smaller resolutions setting button wraps onto new line|UI|Logo display set to none of xs resoltuion and lower. Decrease bootstrap column assignment, for logo and title, from 10 to 6|
+|New Game button need disabinling|||
+|All light runign on at same time|||
+|Icon within button breaking split|||
+|event listen in funciton create multiple clikc for a single user click|||
+|score updating only increasing score so gameover never cleared score even tho reset|||
+||||
+||||
 ||||
 ||||
 ||||
