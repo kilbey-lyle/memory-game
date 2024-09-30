@@ -3,13 +3,14 @@ let game = {
     currentSequence: [],
     buttonNames:['otter','hippo','frog','crow'],
     isComputerTurn: true,
-}
+};
 
 let player = {
     lastMove: '',
     movesThisTurn: 0,
-}
+};
 
+//When page is loaded
 window.onload = function exampleFunction(){
     $('#welcome').modal('show');
     //Loops through player buttons and add event listeners
@@ -46,7 +47,7 @@ window.onload = function exampleFunction(){
                     gameOver();
                 }
             } 
-        })
+        });
     }
     //get form element
     const form = document.getElementById("form-modal");
@@ -60,7 +61,7 @@ window.onload = function exampleFunction(){
         e.preventDefault();
 
         //create data Constructor with form data
-        const formData = new FormData(form)
+        const formData = new FormData(form);
 
         //extract data from data Constructor 
         for (const pair of formData.entries()) {
@@ -78,9 +79,25 @@ window.onload = function exampleFunction(){
             player_name: data[0],
             score: game.score,
             });
-    })
-    
-}
+    });
+    //get all checkboxes
+    let checkboxes = document.getElementsByClassName('form-checkbox');
+    //for each check box add an event listen for click
+    for (let box of checkboxes) {
+        box.addEventListener('click', (e) => {
+            //if box is clicked whhile not check show alert
+            if (box.checked){
+                window.alert('Feature Not Implimented');
+            }
+        });
+    }
+    //get email modal link from game over model and add event listening
+    document.getElementById('email-bttn').addEventListener('click', () => {
+        //Hide game over modal and show email modal
+        $('#game-over').modal('hide');
+        $('#email-modal').modal('show');
+    });
+};
 
 /**
  * Sets isComputerTurn to true
@@ -105,7 +122,7 @@ function newTurn() {
  */
 function showCurrentSequence(currentSequence){
 
-    let i = 0
+    let i = 0;
     let loop = setInterval(() => {
         addAndRemoveLightClass(currentSequence[i]);
         i++;
@@ -122,7 +139,7 @@ function showCurrentSequence(currentSequence){
 function addAndRemoveLightClass(button){
     document.getElementById(`bttn-${button}`).classList.add('light');
     setTimeout(() => {
-        document.getElementById(`bttn-${button}`).classList.remove('light')
+        document.getElementById(`bttn-${button}`).classList.remove('light');
     }, 400);
 }
 

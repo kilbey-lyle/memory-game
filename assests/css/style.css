@@ -170,12 +170,13 @@ button:focus {
 .close {
     font-size: 50px;
     color:#FA211E;
-    line-height: none;
     text-shadow: none;
 }
+
 .modal-header .close {
     padding: 5px 16px 0px 0px;
 }
+
 
 .extra-info {
     border-radius: 15px;
@@ -247,7 +248,7 @@ button:focus {
     color: #fafff5;
 }
 
-.form-input[type='text'] {
+.form-input[type='text'], .form-input[type='email'] {
     color:#002E00;
     padding-left: 10px;
     padding-right: 10px;

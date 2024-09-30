@@ -39,7 +39,12 @@ This section of this document will capture all bugs and their fixes found during
 |Player able to press button and get a reponse during computer turn. incorrectly placed playerturn in a postion where it was excuted before show sequenmce has finsihed. state change during interval clearing so will be chnage once animations are done. |||
 |on submit causes 405 errors. Added submit event listener|||
 |unable to get feild values so created formdata contrusture|||
-|submit button not syaing sent. *NOT FIXED*|||
+|submit button not syaing sent. |||
+|avle to submit non email into email feild. Type updated from text to email|||
+|Change of type of email input means lost style|||
+|Calling model when model a model is open creates overlap of modals|||
+||||
+||||
 ||||
 ||||
 ||||

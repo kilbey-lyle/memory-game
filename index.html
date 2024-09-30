@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="./assests/css/style.css">
     </head>
     <body class="d-flex flex-column min-vh-100">
-
         <script>
         window.fbAsyncInit = function() {
           FB.init({
@@ -21,10 +20,10 @@
             version          : 'v20.0'
           });
         };
-      </script>
-      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-
-    <header>
+         </script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>  
+        <!--Start of Header-->
+        <header>
         <div class="container-fluid" id="header-container">
             <div class="row bg-light-green d-flex" id="header-row">
                 <h2 class="col-6 tx-white">Click It!<i class="fa-solid fa-arrow-pointer tx-dark-green d-none d-sm-inline" id="logo"></i></h2>
@@ -33,7 +32,9 @@
                 </div>         
             </div>
         </div>
-    </header>
+        </header>
+        <!--Start of Header-->
+
         <!--Start Player Button Container-->
         <div class="container-fluid" id="button-container">
             <div class="row d-flex">
@@ -66,27 +67,27 @@
         <!--END Player Button Container-->
         
         <!-- Modal Welcome. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="welcome" tabindex="-1" aria-labelledby="welcome pop-up" aria-hidden="true">
+        <div class="modal fade" id="welcome" tabindex="-1" aria-labelledby="welcome" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="welcome-modal-title">WELCOME!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" id="close-welcome" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p id="instructions">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and mimic what you see. Using the button repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
+                        <p id="instructions">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and memorize the sequence. Using the buttons, repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
                         <div class="extra-info bg-off-white">
                             <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
                             <p id="show-off-text" class="tx-dark-green">Here are some options to give you even more bragging rights. why not give them a go?</p>
                             <form id="welcome-form">
-                                <input type="checkbox" name="audioOnly" class="audioOnly">
+                                <input type="checkbox" name="audioOnly" id="audioOnly" class="audioOnly form-checkbox">
                                 <label for="audioOnly" class="tx-dark-green">
                                     Audio Only
                                 </label>
                                 <br>
-                                <input type="checkbox" name="shuffleButtons" class="shuffleButtons tx-dark-green">
+                                <input type="checkbox" name="shuffleButtons" id="shuffleButtons" class="shuffleButtons form-checkbox">
                                 <label for="shuffleButtons" class="tx-dark-green">Random Button Shuffle</label>
                             </form>
                         </div>
@@ -97,28 +98,28 @@
         <!--END of Model-->
 
         <!-- Modal Setings. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings pop-up" aria-hidden="true">
+        <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="settings-modal-title">SETINGS</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" id="close-settings" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p id="instructions">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and mimic what you see. Using the button repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
+                        <p id="instructions-settings">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and mimic what you see. Using the button repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
                         <div class="extra-info bg-off-white">
                             <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
-                            <p id="show-off-text" class="tx-dark-green">Here are some options to give you even more bragging rights. why not give them a go?</p>
-                            <form id="welcome-form">
-                                <input type="checkbox" name="audioOnly" class="audioOnly">
-                                <label for="audioOnly" class="tx-dark-green">
+                            <p id="show-off-text-settings" class="tx-dark-green">Here are some options to give you even more bragging rights. why not give them a go?</p>
+                            <form id="settings-form">
+                                <input type="checkbox" name="audioOnly" id="audioOnly-settings" class="audioOnly form-checkbox">
+                                <label for="audioOnly-settings" class="tx-dark-green">
                                     Audio Only
                                 </label>
                                 <br>
-                                <input type="checkbox" name="shuffleButtons" class="shuffleButtons tx-dark-green">
-                                <label for="shuffleButtons" class="tx-dark-green">Random Button Shuffle</label>
+                                <input type="checkbox" name="shuffleButtons" id="shuffleButtons-settings" class="shuffleButtons tx-dark-green form-checkbox">
+                                <label for="shuffleButtons-settings" class="tx-dark-green">Random Button Shuffle</label>
                             </form>
                         </div>
                     </div>
@@ -128,12 +129,12 @@
         <!--END of Model-->
 
         <!-- Modal game over. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="game-over" tabindex="-1" aria-labelledby="game over pop-up" aria-hidden="true">
+        <div class="modal fade" id="game-over" tabindex="-1" aria-labelledby="game-over" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content" id="game-over-modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="game-over-modal-title">GAME OVER</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" id="close-game-over" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -157,12 +158,12 @@
         <!--END of Model-->
 
         <!-- Modal send email. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="email-modal" tabindex="-1" aria-labelledby="game over pop-up" aria-hidden="true">
+        <div class="modal fade" id="email-modal" tabindex="-1" aria-labelledby="game-over" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content" id="game-over-modal-content">
+                <div class="modal-content" id="email-modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="game-over-modal-title">EMAIL TIME</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <h5 class="modal-title" id="email-modal-title">EMAIL TIME</h5>
+                        <button type="button" class="close" id="close-email" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -174,7 +175,7 @@
                                 <input type="text" id="name" name="name" class="form-input" required>
                                 <br>
                                 <label for="email" class="form-label">Email: </label>
-                                <input type="text" id="email" name="email" class="form-input" required>
+                                <input type="email" id="email" name="email" class="form-input" required>
                                 <br>
                                 <input type="submit" class="form-input">
                             </form>
