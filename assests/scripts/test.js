@@ -10,7 +10,7 @@ if (
     globalThis.TextDecoder = utils.TextDecoder;
     globalThis.Uint8Array = Uint8Array;
 }
-const { game, player, newTurn, checkLastMove } = require("./game");
+const { game, player, newTurn, checkLastMove, updateScore } = require("./game");
 const { JSDOM } = require("jsdom");
 let fs = require("fs");
 
@@ -89,10 +89,14 @@ describe ("Check move function", () => {
     });
     test("if move doesn't matche return false", () => {
         game.currentSequence.push('hippo');
-        console.log(game.currentSequence);
         expect(checkLastMove('frog')).toBe(false);
    });
 })
 
-
-
+describe ("Update score", () => {
+    test("Score updated", () => {
+        game.score = 10;
+        updateScore();
+        expect(document.getElementById('score').textContent).toBe("10");
+    });
+})

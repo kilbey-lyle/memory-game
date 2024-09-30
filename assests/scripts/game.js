@@ -190,5 +190,5 @@ function facebookShare() {
     
 }
 
-module.exports = { game, player, newTurn, checkLastMove };
+module.exports = { game, player, newTurn, checkLastMove, updateScore };
 
