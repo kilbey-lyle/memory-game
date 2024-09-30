@@ -10,7 +10,7 @@ if (
     globalThis.TextDecoder = utils.TextDecoder;
     globalThis.Uint8Array = Uint8Array;
 }
-const { game, player } = require("./game");
+const { game, player, newTurn } = require("./game");
 const { JSDOM } = require("jsdom");
 let fs = require("fs");
 
@@ -53,9 +53,27 @@ describe ("player object contains the correct keys", () => {
     }); 
 })
 
-describe ("player moves assessed correctly", () => {
-    test("lastMove key exists", () => {
-        expect("lastMove" in player).toBe(true);
+describe ("New Turn initiatation", () => {
+    beforeEach(() => {
+        newTurn();
+    });
+    afterEach(() => {
+        game.score = 0;
+        game.currentSequence = [];
+        game.buttonNames = ['otter','hippo','frog','crow'];
+        game.isComputerTurn = true;
+    });
+    test("Set comptuer turn to true", () => {
+        game.isComputerTurn = false;
+        newTurn();
+        expect(game.isComputerTurn).toBe(true);        
+    });
+    test("New game button is disabled", () => {
+        let onClick = document.getElementById('bttn-new-game').getAttribute('onclick');
+        expect(onclick).toBe(null);
+    });
+    test("Move added to current sequence", () => {
+        expect(game.currentSequence.length).toBe(1);
     });
 })
 
