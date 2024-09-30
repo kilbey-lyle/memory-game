@@ -36,7 +36,7 @@ This section of this document will capture all bugs and their fixes found during
 |Icon within button breaking split|||
 |event listen in funciton create multiple clikc for a single user click|||
 |score updating only increasing score so gameover never cleared score even tho reset|||
-||||
+|Player able to press button and get a reponse during computer turn. incorrectly placed playerturn in a postion where it was excuted before show sequenmce has finsihed. state change during interval clearing so will be chnage once animations are done. |||
 ||||
 ||||
 ||||

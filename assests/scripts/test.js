@@ -10,7 +10,7 @@ if (
     globalThis.TextDecoder = utils.TextDecoder;
     globalThis.Uint8Array = Uint8Array;
 }
-const { game } = require("./game");
+const { game, player } = require("./game");
 const { JSDOM } = require("jsdom");
 let fs = require("fs");
 
@@ -33,6 +33,31 @@ describe ("game object contains the correct keys", () => {
     test("score key exists", () => {
         expect("score" in game).toBe(true);
     });
+    test("currentSequence key exists", () => {
+        expect("currentSequence" in game).toBe(true);
+    });
+    test("buttonNames key exists", () => {
+        expect("buttonNames" in game).toBe(true);
+    });
+    test("isComputerTurn key exists", () => {
+        expect("isComputerTurn" in game).toBe(true);
+    });   
 })
+
+describe ("player object contains the correct keys", () => {
+    test("lastMove key exists", () => {
+        expect("lastMove" in player).toBe(true);
+    });
+    test("movesThisTurn key exists", () => {
+        expect("movesThisTurn" in player).toBe(true);
+    }); 
+})
+
+describe ("player moves assessed correctly", () => {
+    test("lastMove key exists", () => {
+        expect("lastMove" in player).toBe(true);
+    });
+})
+
 
 
