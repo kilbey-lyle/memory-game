@@ -91,36 +91,7 @@
             </div>
         </div>
 
-        <!-- Modal Setings. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings pop-up" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="settings-modal-title">SETINGS</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p id="instructions">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and mimic what you see. Using the button repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
-                        <div class="extra-info bg-off-white">
-                            <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
-                            <p id="show-off-text" class="tx-dark-green">Here are some options to give you even more bragging rights. why not give them a go?</p>
-                            <form id="welcome-form">
-                                <input type="checkbox" name="audioOnly" class="audioOnly">
-                                <label for="audioOnly" class="tx-dark-green">
-                                    Audio Only
-                                </label>
-                                <br>
-                                <input type="checkbox" name="shuffleButtons" class="shuffleButtons tx-dark-green">
-                                <label for="shuffleButtons" class="tx-dark-green">Random Button Shuffle</label>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+       
         <!-- Modal game over. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
         <div class="modal fade" id="game-over" tabindex="-1" aria-labelledby="game over pop-up" aria-hidden="true">
             <div class="modal-dialog">
@@ -162,7 +133,7 @@
                     <div class="modal-body">
                         <div class="extra-info">
                             <p>Wanna Brag to a friend? Enter your name and their email and we'll handle the rest.</p>
-                            <form id="form-modal" onsubmit="return emailShare(this);" method="post">
+                            <form id="form-modal">
                                 <label for="name" class="form-label">Name: </label>
                                 <input type="text" id="name" name="name" class="form-input" required>
                                 <br>

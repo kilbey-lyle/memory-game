@@ -249,6 +249,8 @@ button:focus {
 
 .form-input[type='text'] {
     color:#002E00;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .form-input[type='submit']:hover {

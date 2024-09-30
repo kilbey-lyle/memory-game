@@ -41,7 +41,34 @@ window.onload = function exampleFunction(){
                 console.log('else');
             }
         })
-    }  
+    }
+    const form = document.getElementById("form-modal");
+
+    form.addEventListener('submit', (e) => {
+        let data = [];
+        
+        e.preventDefault();
+        const formData = new FormData(form)
+        for (const pair of formData.entries()) {
+            data.push(pair[1]);
+        }
+
+        console.log(data);
+    
+        
+        emailjs.init({
+            publicKey: "NMysIGh66f5ASQ-TM",
+        });
+
+        console.log(formData.entries());
+
+        emailjs.send("service_eduzpyv","template_hgeoi5r",{
+            to_email: data[1],
+            player_name: data[0],
+            score: game.score,
+            });
+    })
+    
 }
 
 
@@ -113,7 +140,7 @@ function facebookShare() {
     
 }
 
-function emailShare(form) {
+function emailShare() {
     emailjs.send("service_eduzpyv","template_hgeoi5r",{
         to_email: "lyle.kilbey98@gmail.com",
         player_name: "lyle",
