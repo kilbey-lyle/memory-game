@@ -3,7 +3,6 @@ let game = {
     currentSequence: [],
     buttonNames:['otter','hippo','frog','crow'],
     isComputerTurn: true,
-    eventListenersAdded: false,
 }
 
 let player = {
