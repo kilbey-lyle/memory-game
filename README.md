@@ -132,7 +132,7 @@ Click It!'s feature set is informed by the above users story and where appropria
 - HTML - To create a basic site
 - CSS - To create a nice, standout front-end and to give a great user experience
 - Javescript - To implement game logic, and handle API integrations
-- Facebook's sharing on the web - To handle score sharing to facebook
+- Facebook's SDK - To handle score sharing to facebook
 - EmailJs - To handle score sharing via email
 - Balsamiq - To create a wireframes
 
@@ -159,3 +159,4 @@ The site was deployed to Git Hub pages using the following steps:
         - Styling Added
         - extra-info div sections added and styled
         - Intergrated with Document load and settings button
+4. Facebook share function was provided by facebook sdk documentation [facebook share dialog](https://developers.facebook.com/docs/sharing/reference/share-dialog)

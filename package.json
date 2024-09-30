@@ -1,16 +1,22 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "jest-environment-jsdom": "^27.4.7",
+    "util": "^0.12.5"
   },
   "name": "memory-game",
   "description": "Click it is a memory game designed for all ages. Created and developed by Lyle Kilbey as part of Code Institutes Web App Development Qualification.",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^27.4.7",
+    "jsdom": "^22.0.0"
   },
   "scripts": {
     "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "repository": {
     "type": "git",

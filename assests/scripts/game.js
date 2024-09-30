@@ -70,7 +70,17 @@ function showCurrentSequence(currentSequence){
 
 function updateScore() {
     document.getElementById('score').textContent = game.score;
-}   
+}
+
+//Credit 4, facebook SDK documentaion 
+function facebookShare() {
+    FB.ui({
+        method: 'share',
+        href: 'https://kilbey-lyle.github.io/memory-game/',
+        hashtag: `#ClickIt!`,
+      }, function(response){});
+    
+}
 
 for (let button of document.getElementsByClassName('player-bttn')) {
     button.addEventListener('click', (e) => {
@@ -98,4 +108,6 @@ for (let button of document.getElementsByClassName('player-bttn')) {
         }
     })
 }
+
+module.exports = { game };
 
