@@ -51,7 +51,7 @@ This section of this document will capture all bugs and their fixes found during
 ![validator photo](assests/imgs/readmeimgs/html-val-2.png)
 ![validator photo](assests/imgs/readmeimgs/html-val-3.png)
 
-Errors address by updating modal id to include modal types. In addtion to giving correct aria labels to modal using same modal type.
+Errors address by updating modal id to include modal types. In addtion to giving correct aria labels to modal using same modal type. In addtoin the labeling added allow for easier maintainability. 
 
 ![validator photo](assests/imgs/readmeimgs/html-val-complete.png)
 
@@ -72,6 +72,6 @@ All warnings in relation to the use of ES6 required funcitonailty. No action nee
 ![validator photos](assests/imgs/readmeimgs/lh-val-1.png)
 ![validator photos](assests/imgs/readmeimgs/lh-val-2.png)
 <br>
-Issue with aria labels on buttons. Labels added to Player buttons, Settings Button and Share butttons contained in footer. Contrast issue remains as only impacting Click It! title
+Issue with aria labels on buttons. Labels added to Player buttons, Settings Button and Share butttons contained in footer. Contrast issue remains as only impacting Click It! title.
 <br>
 ![validator photos](assests/imgs/readmeimgs/lh-val-complete.png)

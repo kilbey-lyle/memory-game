@@ -44,12 +44,12 @@ The first theme for CLick It! and its default them is going to base around the a
 
 #### Colors
 The color scheme for the site will be as follows: 
-![Color pallet Image](assests\imgs\readmeimgs\Color-ClickIt-colors.jpeg)
+![Color pallet Image](assests/imgs/readmeimgs/Color-ClickIt-colors.jpeg)
 
 This color pallet gives a good coverage of background and text color combination which pass contrast tests. In addition the Greens and other neutral colors support the animal kingdom theme. 
 
 In addition to color pallet above, the main button colors for the user interface with the game mechanics will be as follows:
-![Color pallet for buttons image](assests\imgs\readmeimgs\clickit-button-color.jpeg)
+![Color pallet for buttons image](assests/imgs/readmeimgs/clickit-button-color.jpeg)
 this set of colors are bold vibrant and have a good level of contrast to each other. 
 #### Iconography
 To help support the chosen theme, the button iconography included within the design are: 
@@ -68,24 +68,24 @@ For the sharing features Click It! will be using:
 
 
 ### Wireframes
-Click It!'s design is based of a simple main game screen, with 3 pop-up variants. A full copy of this project's wireframes can be found [here](assests\imgs\readmeimgs\clickitWireframes.pdf).
+Click It!'s design is based of a simple main game screen, with 3 pop-up variants. A full copy of this project's wireframes can be found [here](assests/imgs/readmeimgs/clickitWireframes.pdf).
 
 #### Main Game Screen
-![Main Game Screen wireframe](assests\imgs\readmeimgs\mainGameScreen.png)
+![Main Game Screen wireframe](assests/imgs/readmeimgs/mainGameScreen.png)
 This is a simple page that player will be able to navigate to once they have dismissed the welcome pop up.
 
 It consists of a header, containing Click It! name, logo, and a cog icon which open setting when pressed. Then the main game buttons which are used to illustrate and input the computer and player sequence's. A score counter and a new game button which starts a new game if one is not already in progress. 
 
 #### Welcome Page
-![welcome page wireframe](assests\imgs\readmeimgs\welcomePage.png)
+![welcome page wireframe](assests/imgs/readmeimgs/welcomePage.png)
 This shows once the document is ready and is the first thing the user sees. It give basic instructions on how to play the game. In addition to a form of check boxes, allowing the user increase or decrease difficulty.
 
 #### Setting Page
-![Setting page wireframe](assests\imgs\readmeimgs\settingPage.png)
+![Setting page wireframe](assests/imgs/readmeimgs/settingPage.png)
 To aid in player ease, the setting page looks very similar to the welcome page. It explains to rules of the game. In addition to a form of check boxes, allowing the user increase or decrease difficulty.
 
 #### Game Over Page
-![Game Over Page wireframe](assests\imgs\readmeimgs\gameOverPage.png)
+![Game Over Page wireframe](assests/imgs/readmeimgs/gameOverPage.png)
 A simple page inverse the colors used in all other pop-ups. It use the game button colors to draw attention to the share features built into Click it!. In hopes of encouraging the users to share starting the family competition.  
 
 ## Features

@@ -1,208 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Click It!</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assests/css/style.css">
-    </head>
-    <body class="d-flex flex-column min-vh-100">
-        <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId            : '1319239435709182',
-            xfbml            : true,
-            version          : 'v20.0'
-          });
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click It!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assests/css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1319239435709182',
+                xfbml: true,
+                version: 'v20.0'
+            });
         };
-         </script>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>  
-        <!--Start of Header-->
-        <header>
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <!--Start of Header-->
+    <header>
         <div class="container-fluid" id="header-container">
             <div class="row bg-light-green d-flex" id="header-row">
-                <h2 class="col-6 tx-white">Click It!<i class="fa-solid fa-arrow-pointer tx-dark-green d-none d-sm-inline" id="logo"></i></h2>
+                <h2 class="col-6 tx-white">Click It!<i
+                        class="fa-solid fa-arrow-pointer tx-dark-green d-none d-sm-inline" id="logo"></i></h2>
                 <div id="setting-button-wrapper">
-                    <button id="settings-cog" type="button" data-toggle="modal" data-target="#settings" aria-label="settings-button"><i class="fa-solid fa-gear tx-black"></i></button>
-                </div>         
+                    <button id="settings-cog" type="button" data-toggle="modal" data-target="#settings"
+                        aria-label="settings-button"><i class="fa-solid fa-gear tx-black"></i></button>
+                </div>
             </div>
         </div>
-        </header>
-        <!--Start of Header-->
+    </header>
+    <!--Start of Header-->
 
-        <!--Start Player Button Container-->
-        <div class="container-fluid" id="button-container">
-            <div class="row d-flex">
-                <div class="d-sm-none d-md-block col-3 spacer"></div>
-                <button class="player-bttn bttn-yellow col-12 col-md-3" id="bttn-otter" aria-label="otter-button">
-                    <i class="fa-solid fa-otter"></i>
-                </button>
-                <button class="player-bttn bttn-purple col-12 col-md-3" id="bttn-hippo" aria-label="hippo-button">
-                    <i class="fa-solid fa-hippo"></i>
-                </button>
+    <!--Start Player Button Container-->
+    <div class="container-fluid" id="button-container">
+        <div class="row d-flex">
+            <div class="d-sm-none d-md-block col-3 spacer"></div>
+            <button class="player-bttn bttn-yellow col-12 col-md-3" id="bttn-otter" aria-label="otter-button">
+                <i class="fa-solid fa-otter"></i>
+            </button>
+            <button class="player-bttn bttn-purple col-12 col-md-3" id="bttn-hippo" aria-label="hippo-button">
+                <i class="fa-solid fa-hippo"></i>
+            </button>
+        </div>
+        <div class="row">
+            <div class="d-sm-none d-md-block col-3 spacer"></div>
+            <button class="player-bttn bttn-red col-12 col-md-3" id="bttn-crow" aria-label="crow-button">
+                <i class="fa-solid fa-crow"></i>
+            </button>
+            <button class="player-bttn bttn-blue col-12 col-md-3" id="bttn-frog" aria-label="frog-button">
+                <i class="fa-solid fa-frog"></i>
+            </button>
+        </div>
+        <div class="row" id="score-new-game-row">
+            <div class="col-12 col-md-6" id="score-wrapper">
+                <p class="bg-dark-green tx-white">SCORE: <span class="bg-off-white tx-dark-green" id="score">0</span>
+                </p>
             </div>
-            <div class="row">
-                <div class="d-sm-none d-md-block col-3 spacer"></div>
-                <button class="player-bttn bttn-red col-12 col-md-3" id="bttn-crow" aria-label="crow-button">
-                    <i class="fa-solid fa-crow"></i>
-                </button>
-                <button class="player-bttn bttn-blue col-12 col-md-3" id="bttn-frog" aria-label="frog-button">
-                    <i class="fa-solid fa-frog"></i>
-                </button>
-            </div>
-            <div class="row" id="score-new-game-row">
-                <div class="col-12 col-md-6" id="score-wrapper">
-                    <p class="bg-dark-green tx-white">SCORE: <span class="bg-off-white tx-dark-green" id="score">0</span></p>
-                </div>
-                <div class="col-12 col-md-6" id="new-game-wrapper">
-                    <button id="bttn-new-game" class="bg-green tx-white" onclick="newTurn()" aria-label="new-turn-button">NEW GAME</button>
-                </div>
+            <div class="col-12 col-md-6" id="new-game-wrapper">
+                <button id="bttn-new-game" class="bg-green tx-white" onclick="newTurn()"
+                    aria-label="new-turn-button">NEW GAME</button>
             </div>
         </div>
-        <!--END Player Button Container-->
-        
-        <!-- Modal Welcome. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="welcome" tabindex="-1" aria-labelledby="welcome" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="welcome-modal-title">WELCOME!</h5>
-                        <button type="button" class="close" id="close-welcome" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p id="instructions">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and memorize the sequence. Using the buttons, repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
-                        <div class="extra-info bg-off-white">
-                            <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
-                            <p id="show-off-text" class="tx-dark-green">Here are some options to give you even more bragging rights. why not give them a go?</p>
-                            <form id="welcome-form">
-                                <input type="checkbox" name="audioOnly" id="audioOnly" class="audioOnly form-checkbox">
-                                <label for="audioOnly" class="tx-dark-green">
-                                    Audio Only
-                                </label>
-                                <br>
-                                <input type="checkbox" name="shuffleButtons" id="shuffleButtons" class="shuffleButtons form-checkbox">
-                                <label for="shuffleButtons" class="tx-dark-green">Random Button Shuffle</label>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--END of Model-->
+    </div>
+    <!--END Player Button Container-->
 
-        <!-- Modal Setings. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="settings-modal-title">SETINGS</h5>
-                        <button type="button" class="close" id="close-settings" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p id="instructions-settings">It's time to CLICK IT! You will be presented with a sequence clicks, and its your job to try and mimic what you see. Using the button repeat back to Click It! what you see. Have fun and don't get frustrated... it's hard than it looks. </p>
-                        <div class="extra-info bg-off-white">
-                            <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
-                            <p id="show-off-text-settings" class="tx-dark-green">Here are some options to give you even more bragging rights. why not give them a go?</p>
-                            <form id="settings-form">
-                                <input type="checkbox" name="audioOnly" id="audioOnly-settings" class="audioOnly form-checkbox">
-                                <label for="audioOnly-settings" class="tx-dark-green">
-                                    Audio Only
-                                </label>
-                                <br>
-                                <input type="checkbox" name="shuffleButtons" id="shuffleButtons-settings" class="shuffleButtons tx-dark-green form-checkbox">
-                                <label for="shuffleButtons-settings" class="tx-dark-green">Random Button Shuffle</label>
-                            </form>
-                        </div>
+    <!-- Modal Welcome. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
+    <div class="modal fade" id="welcome" tabindex="-1" aria-labelledby="welcome" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="welcome-modal-title">WELCOME!</h5>
+                    <button type="button" class="close" id="close-welcome" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="instructions">It's time to CLICK IT! You will be presented with a sequence clicks, and its
+                        your job to try and memorize the sequence. Using the buttons, repeat back to Click It! what you
+                        see. Have fun and don't get frustrated... it's hard than it looks. </p>
+                    <div class="extra-info bg-off-white">
+                        <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
+                        <p id="show-off-text" class="tx-dark-green">Here are some options to give you even more bragging
+                            rights. why not give them a go?</p>
+                        <form id="welcome-form">
+                            <input type="checkbox" name="audioOnly" id="audioOnly" class="audioOnly form-checkbox">
+                            <label for="audioOnly" class="tx-dark-green">
+                                Audio Only
+                            </label>
+                            <br>
+                            <input type="checkbox" name="shuffleButtons" id="shuffleButtons"
+                                class="shuffleButtons form-checkbox">
+                            <label for="shuffleButtons" class="tx-dark-green">Random Button Shuffle</label>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!--END of Model-->
+    </div>
+    <!--END of Model-->
 
-        <!-- Modal game over. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="game-over" tabindex="-1" aria-labelledby="game-over" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content" id="game-over-modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="game-over-modal-title">GAME OVER</h5>
-                        <button type="button" class="close" id="close-game-over" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+    <!-- Modal Setings. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
+    <div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settings" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="settings-modal-title">SETINGS</h5>
+                    <button type="button" class="close" id="close-settings" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="instructions-settings">It's time to CLICK IT! You will be presented with a sequence clicks,
+                        and its your job to try and mimic what you see. Using the button repeat back to Click It! what
+                        you see. Have fun and don't get frustrated... it's hard than it looks. </p>
+                    <div class="extra-info bg-off-white">
+                        <h6 class="extra-info-title tx-dark-green">Want to show off?</h6>
+                        <p id="show-off-text-settings" class="tx-dark-green">Here are some options to give you even more
+                            bragging rights. why not give them a go?</p>
+                        <form id="settings-form">
+                            <input type="checkbox" name="audioOnly" id="audioOnly-settings"
+                                class="audioOnly form-checkbox">
+                            <label for="audioOnly-settings" class="tx-dark-green">
+                                Audio Only
+                            </label>
+                            <br>
+                            <input type="checkbox" name="shuffleButtons" id="shuffleButtons-settings"
+                                class="shuffleButtons tx-dark-green form-checkbox">
+                            <label for="shuffleButtons-settings" class="tx-dark-green">Random Button Shuffle</label>
+                        </form>
                     </div>
-                    <div class="modal-body">
-                        <p id="game-over-message">Sorry to hear you lost, I am sure you will do better next time... Maybe.</p>
-                        <div class="extra-info bg-green">
-                            <h6 class="extra-info-title tx-off-white" id="game-over-extra-info-title">Braging Time!</h6>
-                            <p class="share-text">Why Not let you're friends and family know how clever you are.</p>
-                            <p class="share-text">Use the links below to spread the word about your intellectual prowess - you're so clever!</p>
-                            <div class="container">
-                                <div class="row" id="link-wrapper">
-                                    <button class="link-bttn bg-green col-6" id="facebook-bttn" onclick="facebookShare()"><i class="fa-brands fa-facebook"></i></button>
-                                    <button class="link-bttn bg-green col-6" id="email-bttn"><i class="fa-regular fa-envelope"></i></button>
-                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END of Model-->
+
+    <!-- Modal game over. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
+    <div class="modal fade" id="game-over" tabindex="-1" aria-labelledby="game-over" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="game-over-modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="game-over-modal-title">GAME OVER</h5>
+                    <button type="button" class="close" id="close-game-over" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="game-over-message">Sorry to hear you lost, I am sure you will do better next time... Maybe.
+                    </p>
+                    <div class="extra-info bg-green">
+                        <h6 class="extra-info-title tx-off-white" id="game-over-extra-info-title">Braging Time!</h6>
+                        <p class="share-text">Why Not let you're friends and family know how clever you are.</p>
+                        <p class="share-text">Use the links below to spread the word about your intellectual prowess -
+                            you're so clever!</p>
+                        <div class="container">
+                            <div class="row" id="link-wrapper">
+                                <button class="link-bttn bg-green col-6" id="facebook-bttn" onclick="facebookShare()"><i
+                                        class="fa-brands fa-facebook"></i></button>
+                                <button class="link-bttn bg-green col-6" id="email-bttn"><i
+                                        class="fa-regular fa-envelope"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--END of Model-->
+    </div>
+    <!--END of Model-->
 
-        <!-- Modal send email. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
-        <div class="modal fade" id="email-modal" tabindex="-1" aria-labelledby="game-over" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content" id="email-modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="email-modal-title">EMAIL TIME</h5>
-                        <button type="button" class="close" id="close-email" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="extra-info">
-                            <p>Wanna Brag to a friend? Enter your name and their email and we'll handle the rest.</p>
-                            <form id="form-modal">
-                                <label for="name" class="form-label">Name: </label>
-                                <input type="text" id="name" name="name" class="form-input" required>
-                                <br>
-                                <label for="email" class="form-label">Email: </label>
-                                <input type="email" id="email" name="email" class="form-input" required>
-                                <br>
-                                <input type="submit" id="email-submit" value="Submit" class="form-input">
-                            </form>
-                        </div>
+    <!-- Modal send email. Credit to Bootstrap full details in credits section of read me credit No. 3 -->
+    <div class="modal fade" id="email-modal" tabindex="-1" aria-labelledby="game-over" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="email-modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="email-modal-title">EMAIL TIME</h5>
+                    <button type="button" class="close" id="close-email" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="extra-info">
+                        <p>Wanna Brag to a friend? Enter your name and their email and we'll handle the rest.</p>
+                        <form id="form-modal">
+                            <label for="name" class="form-label">Name: </label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                            <br>
+                            <label for="email" class="form-label">Email: </label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <br>
+                            <input type="submit" id="email-submit" value="Submit" class="form-input">
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!--END of Model-->
+    </div>
+    <!--END of Model-->
 
-        <!--Start of footer-->
-        <footer class="mt-auto">
-            <div class="container-fluid">
-                <div class="row bg-light-green">
-                    <button class="footer-button bg-light-green col-6" onclick="facebookShare()" aria-label="facebook-button"><i class="fa-brands fa-facebook"></i></button>
-                    <button class="footer-button bg-light-green col-6" data-toggle="modal" data-target="#email-modal" aria-label="email-button"><i class="fa-regular fa-envelope"></i></button>
-                </div>
+    <!--Start of footer-->
+    <footer class="mt-auto">
+        <div class="container-fluid">
+            <div class="row bg-light-green">
+                <button class="footer-button bg-light-green col-6" onclick="facebookShare()"
+                    aria-label="facebook-button"><i class="fa-brands fa-facebook"></i></button>
+                <button class="footer-button bg-light-green col-6" data-toggle="modal" data-target="#email-modal"
+                    aria-label="email-button"><i class="fa-regular fa-envelope"></i></button>
             </div>
-        </footer>
-        <!--End of footer-->
+        </div>
+    </footer>
+    <!--End of footer-->
 
-        <script src="https://kit.fontawesome.com/289e1d11d0.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="assests/scripts/game.js"></script>
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script src="https://kit.fontawesome.com/289e1d11d0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
-    </body>
+    <script type="text/javascript" src="assests/scripts/game.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+</body>
+
 </html>

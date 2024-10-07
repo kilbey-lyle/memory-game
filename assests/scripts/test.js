@@ -1,6 +1,7 @@
 /**
  * @jest-environment jsdom
  */
+
 if (
     typeof globalThis.TextEncoder === "undefined" ||
     typeof globalThis.TextDecoder === "undefined"
@@ -101,18 +102,14 @@ describe ("Update score", () => {
     });
 })
 
-/**
+
 describe ("gameOver Function", () => {
     beforeEach(() => {
         game.isComputerTurn = false;
 
-        //gameOver();
-    });
-    afterEach(() => {
-        
+        gameOver();
     });
     test("Should reset default to is computer turn", () => {
          expect(game.isComputerTurn).toBe(true);
     });
 });
-*/

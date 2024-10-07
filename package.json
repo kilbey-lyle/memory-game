@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "jest-environment-jsdom": "^27.4.7",
+    "jquery": "^3.7.1",
     "util": "^0.12.5"
   },
   "name": "memory-game",
