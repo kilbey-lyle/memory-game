@@ -109,9 +109,13 @@ function newTurn() {
     //disable new game button
     document.getElementById('bttn-new-game').onclick = null;
     //add a turn to the current Sequence
-    game.currentSequence.push(game.buttonNames[Math.floor(Math.random()*game.buttonNames.length)]);
+    addRandomButtonChoice();
     //show the player the current sequence
     showCurrentSequence(game.currentSequence);
+}
+
+function addRandomButtonChoice() {
+    game.currentSequence.push(game.buttonNames[Math.floor(Math.random()*game.buttonNames.length)]);
 }
 
 /**
