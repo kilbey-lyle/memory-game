@@ -31,7 +31,7 @@ window.onload = function exampleFunction(){
                         player.lastMove = '';
                         player.movesThisTurn = 0;
                         //increase game score by 1
-                        increaseScoreByOne();
+                        increaseScoreByOne(game.score);
                         //start new turn to re intiate funcitonal loop
                         newTurn();
                     }
@@ -104,6 +104,10 @@ window.onload = function exampleFunction(){
  * Then initiates showCurrentSequence.
  */
 function newTurn() {
+    //reset game object attributes in case not first game
+    if (game.currentSequence.length == 0){
+        resetScore();
+    }
     game.isComputerTurn = true;
     //disable new game button
     document.getElementById('bttn-new-game').disabled = true;
@@ -116,8 +120,8 @@ function newTurn() {
 /**
  * Updates game score by one then call updateScore to update score shown in DOM
  */
-function increaseScoreByOne() {
-    game.score++;
+function increaseScoreByOne(score) {
+    game.score = score + 1;
     updateScore();
 }
 
@@ -207,8 +211,6 @@ function gameOver () {
 
     player.lastMove = '';
     player.movesThisTurn = 0;
-
-    resetScore();
 
     document.getElementById('bttn-new-game').disabled = false;
 

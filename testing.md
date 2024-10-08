@@ -44,6 +44,8 @@ This section of this document will capture all bugs and their fixes found during
 |email input lost styling|bug|this happen due to the change of input type. email input type added to css rules|
 |Possible to have overlapping modals|bug|events listners added to the calling of modal rather that data-target attribute. than uses jquery to invoke modal show/hide for the relevant modals.|
 |Form feilds not resetting on submit button click|bug|Added form reset after data retrival to submit button event listener|
+|Emailing score after gameover always results in a score of 0 being emailed|bug|Moved reset score from gameover function to new turn so score remains at achieved score until a new game is started|
+|Score remains at zero even after successfull modd|Bug|Score was reset at start of each turn. Protection added to new turn function to only reset the score is the current sequence is zero. .i.e. when a game is not in progress|
 
 ## Validator Testing
 
