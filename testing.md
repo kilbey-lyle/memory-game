@@ -43,6 +43,7 @@ This section of this document will capture all bugs and their fixes found during
 |User able to add non email to email address feild|bug|input type updated to email|
 |email input lost styling|bug|this happen due to the change of input type. email input type added to css rules|
 |Possible to have overlapping modals|bug|events listners added to the calling of modal rather that data-target attribute. than uses jquery to invoke modal show/hide for the relevant modals.|
+|Form feilds not resetting on submit button click|bug|Added form reset after data retrival to submit button event listener|
 
 ## Validator Testing
 

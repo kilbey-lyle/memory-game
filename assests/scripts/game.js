@@ -18,14 +18,7 @@ window.onload = function exampleFunction(){
         button.addEventListener('click', (e) => {
             //Don't do anything is it is computers turn
             if (!game.isComputerTurn) {
-                //Capture button which has been pressed by player
-                let buttonID = e.target.getAttribute('id');
-                //If icon click get buttonID and capture which button is parent
-                if (buttonID == null){
-                    buttonID = e.target.parentElement.getAttribute('id');
-                }
-                //remove 'bttn' from button ID and capture move in player object
-                player.lastMove = buttonID.split('-')[1];
+                player.lastMove = getButtonID(e.target);
                 //Flash button so user knows click was successful
                 addAndRemoveLightClass(player.lastMove);
                 //increase player move this turn for later comparion
@@ -119,6 +112,21 @@ function newTurn() {
     game.currentSequence.push(game.buttonNames[Math.floor(Math.random()*game.buttonNames.length)]);
     //show the player the current sequence
     showCurrentSequence(game.currentSequence);
+}
+
+/**
+ * Gets ID from element. If ID is null gets ID of element parent.
+ * returns string of ID after - charater. 
+ */
+function getButtonID(button){
+    let buttonID = button.getAttribute('id');
+    //If icon click get buttonID and capture which button is parent
+    if (buttonID == null){
+        buttonID = e.target.parentElement.getAttribute('id');
+    }
+    //remove 'bttn' from button ID and capture move in player object
+    buttonID = buttonID.split('-')[1];
+    return buttonID;
 }
 
 /**
