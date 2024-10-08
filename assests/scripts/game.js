@@ -12,7 +12,7 @@ const player = {
 
 //When page is loaded
 window.onload = function exampleFunction(){
-    //$('#welcome').modal('show');
+    $('#welcome').modal('show');
     //Loops through player buttons and add event listeners
     for (let button of document.getElementsByClassName('player-bttn')) {
         button.addEventListener('click', (e) => {
