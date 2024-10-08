@@ -3,6 +3,7 @@
 Click it is a memory game designed for all ages. Created and developed by Lyle Kilbey as part of Code Institutes Web App Development Qualification. 
 
 This website has been developed to show case an interactive front end website.
+![Resposive UI image](assests/imgs/readmeimgs/device_look.png)
 
 ## UX
 

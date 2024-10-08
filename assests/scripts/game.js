@@ -1,18 +1,18 @@
-let game = {
+const game = {
     score: 0,
     currentSequence: [],
     buttonNames:['otter','hippo','frog','crow'],
     isComputerTurn: true,
 };
 
-let player = {
+const player = {
     lastMove: '',
     movesThisTurn: 0,
 };
 
 //When page is loaded
 window.onload = function exampleFunction(){
-    $('#welcome').modal('show');
+    //$('#welcome').modal('show');
     //Loops through player buttons and add event listeners
     for (let button of document.getElementsByClassName('player-bttn')) {
         button.addEventListener('click', (e) => {
@@ -219,7 +219,10 @@ function gameOver () {
 
 
 
-//Credit 4, facebook SDK documentaion 
+/**
+ * Credit 4, facebook SDK documentaion. 
+ * Called via onclick attribute on footer button and #facebook-bttn
+ */
 function facebookShare() {
     FB.ui({
         method: 'share',
