@@ -227,7 +227,6 @@ function facebookShare() {
     FB.ui({
         method: 'share',
         href: 'https://kilbey-lyle.github.io/memory-game/',
-        hashtag: `#ClickIt!`,
       }, function(response){});
     
 }
