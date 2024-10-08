@@ -65,16 +65,15 @@ window.onload = function exampleFunction(){
         
         //initialise email data array
         let data = [];
-        
 
         //create data Constructor with form data
         const formData = new FormData(form);
-
         //extract data from data Constructor 
         for (const pair of formData.entries()) {
             data.push(pair[1]);
         }    
-        
+        //reset form feilds
+        form.reset();
         //initialise emailjs intergration
         emailjs.init({
             publicKey: "NMysIGh66f5ASQ-TM",
