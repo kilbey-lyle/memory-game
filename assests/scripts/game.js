@@ -106,7 +106,7 @@ window.onload = function exampleFunction(){
 function newTurn() {
     game.isComputerTurn = true;
     //disable new game button
-    document.getElementById('bttn-new-game').onclick = null;
+    document.getElementById('bttn-new-game').disabled = true;
     //add a turn to the current Sequence
     addRandomButtonChoice();
     //show the player the current sequence
@@ -210,7 +210,8 @@ function gameOver () {
 
     resetScore();
 
-    document.getElementById('bttn-new-game').setAttribute('onclick', 'newTurn()');
+    document.getElementById('bttn-new-game').disabled = false;
+
     $('#game-over').modal('show');
 }
 
