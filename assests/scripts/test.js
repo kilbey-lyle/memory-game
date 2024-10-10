@@ -11,11 +11,9 @@ if (
     globalThis.TextDecoder = utils.TextDecoder;
     globalThis.Uint8Array = Uint8Array;
 }
-const { game, player, newTurn, checkLastMove, updateScore, gameOver } = require("./game");
+const { game, player, newTurn, checkLastMove, gameOver, increaseScoreByOne, resetScore } = require("./game");
 const { JSDOM } = require("jsdom");
 let fs = require("fs");
-
-
 
 beforeAll (() => {
     let fileContents = fs.readFileSync("./index.html", "utf-8");
@@ -55,9 +53,6 @@ describe ("player object contains the correct keys", () => {
 })
 
 describe ("New Turn initiatation", () => {
-    beforeEach(() => {
-        newTurn();
-    });
     afterEach(() => {
         game.currentSequence = [];
         game.isComputerTurn = true;
@@ -68,11 +63,23 @@ describe ("New Turn initiatation", () => {
         expect(game.isComputerTurn).toBe(true);        
     });
     test("New game button is disabled", () => {
-        let onClick = document.getElementById('bttn-new-game').getAttribute('onclick');
-        expect(onclick).toBe(null);
+        let disabled = document.getElementById('bttn-new-game').disabled;
+        expect(disabled).toBe(true);
     });
     test("Move added to current sequence", () => {
+        newTurn();
         expect(game.currentSequence.length).toBe(1);
+    });
+    test("if a new game should set score to zero", () => {
+        game.score = 1;
+        newTurn();
+        expect(game.score).toBe(0);
+    });
+    test("if a not new game should score should not be changed", () => {
+        game.score = 5;
+        game.currentSequence.push('hippo')
+        newTurn();
+        expect(game.score).toBe(5);
     });
 })
 
@@ -94,14 +101,27 @@ describe ("Check move function", () => {
    });
 })
 
-describe ("Update score", () => {
-    test("Score updated", () => {
-        game.score = 10;
-        updateScore();
-        expect(document.getElementById('score').textContent).toBe("10");
+describe ("Changing score", () => {
+    beforeEach(() => {
+        game.score = 5;
     });
-})
-
+    test("score should be increased by one", () => {
+         increaseScoreByOne(game.score);
+         expect(game.score).toBe(6);
+    });
+    test("score feild should be increased by one", () => {
+        increaseScoreByOne(game.score);
+        expect(document.getElementById('score').textContent).toBe("6");
+    });
+    test("score should be set to zero", () => {
+        resetScore();
+        expect(game.score).toBe(0);
+    });
+    test("score feild should be set to zero", () => {
+        resetScore();
+        expect(document.getElementById('score').textContent).toBe("0");
+   });
+});
 
 describe ("gameOver Function", () => {
     beforeEach(() => {
@@ -109,7 +129,7 @@ describe ("gameOver Function", () => {
 
         gameOver();
     });
-    test("Should reset default to is computer turn", () => {
+    test("Set comptuer turn to true", () => {
          expect(game.isComputerTurn).toBe(true);
     });
 });

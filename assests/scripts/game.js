@@ -1,3 +1,4 @@
+
 const game = {
     score: 0,
     currentSequence: [],
@@ -92,8 +93,8 @@ window.onload = function exampleFunction(){
     //get email modal link from game over model and add event listening
     document.getElementById('email-bttn').addEventListener('click', () => {
         //Hide game over modal and show email modal
-        $('#game-over').modal('hide');
-        $('#email-modal').modal('show');
+        document.getElementById('game-over').style.display = 'none';
+        document.getElementById('email-modal').style.display = 'block';
     });
 };
 
@@ -214,7 +215,7 @@ function gameOver () {
 
     document.getElementById('bttn-new-game').disabled = false;
 
-    $('#game-over').modal('show');
+    document.getElementById('game-over').style.display = 'block';
 }
 
 
@@ -231,5 +232,5 @@ function facebookShare() {
     
 }
 
-module.exports = { game, player, newTurn, checkLastMove, updateScore, gameOver };
+module.exports = { game, player, newTurn, checkLastMove, gameOver, increaseScoreByOne, resetScore };
 
