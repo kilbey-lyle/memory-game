@@ -1,4 +1,3 @@
-
 const game = {
     score: 0,
     currentSequence: [],
@@ -115,7 +114,7 @@ function newTurn() {
     //add a turn to the current Sequence
     addRandomButtonChoice();
     //show the player the current sequence
-    showCurrentSequence(game.currentSequence);
+    showCurrentSequence(game.currentSequence, addAndRemoveLightClass);
 }
 
 /**
@@ -149,7 +148,7 @@ function getButtonID(button){
     let buttonID = button.getAttribute('id');
     //If icon click get buttonID and capture which button is parent
     if (buttonID == null){
-        buttonID = e.target.parentElement.getAttribute('id');
+        buttonID = button.parentElement.getAttribute('id');
     }
     //remove 'bttn' from button ID and capture move in player object
     buttonID = buttonID.split('-')[1];
@@ -161,11 +160,11 @@ function getButtonID(button){
  * Loops through array on an interval passing each itme of array to addAndRemoveLightClass()
  * Once loop is complete, sets isComputerTurn to false.
  */
-function showCurrentSequence(currentSequence){
+function showCurrentSequence(currentSequence, func){
 
     let i = 0;
     let loop = setInterval(() => {
-        addAndRemoveLightClass(currentSequence[i]);
+        func(currentSequence[i]);
         i++;
         if (i >= currentSequence.length){
             game.isComputerTurn = false;
@@ -215,7 +214,7 @@ function gameOver () {
 
     document.getElementById('bttn-new-game').disabled = false;
 
-    document.getElementById('game-over').style.display = 'block';
+    $('#game-over').modal('show');
 }
 
 
@@ -232,5 +231,5 @@ function facebookShare() {
     
 }
 
-module.exports = { game, player, newTurn, checkLastMove, gameOver, increaseScoreByOne, resetScore };
+module.exports = { game, player, newTurn, checkLastMove, gameOver, increaseScoreByOne, resetScore, updateScore, getButtonID, addAndRemoveLightClass, showCurrentSequence };
 
