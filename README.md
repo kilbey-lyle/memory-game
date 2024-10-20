@@ -8,10 +8,10 @@ This website has been developed to show case an interactive front end website.
 ## UX
 
 ### Project Goals
-The goal of 'Click It!' is to create a simple game for all ages. Pitting friends and family against each other to try reach the highest score without making a single mistake. Click it will contain easy to use share features to allows users to to brag about their superior memory via social media and email. The inbuilt competition CLick It! provides, combines for the perfect blend of fun and frustration. 
+The goal of 'Click It!' is to create a simple game for all ages. Pitting friends and family against each other to try reach the highest score without making a single mistake. Click it will contain easy to use share features to allows users to to brag about their superior memory via social media and email. The inbuilt competition Click It! provides, combines for the perfect blend of fun and frustration. 
 
 ### Player Goals
-A player will be motivated to visit Click It! to show their short-term memory prowess, wether attempting to best themselves or a peer. To a player their goal is simple, enjoy attempting to get the highest possible sequence in an environment with a ever increasing level of complexity. 
+A player will be motivated to visit Click It! to show their short-term memory prowess, whether attempting to best themselves or a peer. To a player their goal is simple, enjoy attempting to get the highest possible sequence in an environment with a ever increasing level of complexity. 
 
 ### Developer and Business Goals
 Build a simple single-player memory game. Using available social media and email API's to allow users to quickly and easily share their score from each round attempted. 
@@ -24,11 +24,11 @@ As the sole developer of this website, my goal is to create an intuitive experie
 |1|As a user, I would like to be able to share my result to facebook so that I can brag about my score to my peers|M| ![user story evidence](assests/imgs/readmeimgs/evid-us1.png)| To maximize the family competition side of Click It! facebook average user base is an ideal target marketing audience. More information on social media audiences can be found [here](https://studioaps.in/best-ways-to-use-social-media-to-promote-online-gaming/#promote-gaming-toc-1b).|
 |2|As a user, I would like to be able to share my result to 'X' (Previously known as Twitter) so that I can brag about my score to my peers|S|Did not implement|In comparison to Facebook X average user base does not fit the casual nature of Click It!. However, the conversational style of X's post system does fit well the Click It's desire to create the feeling of competition. More information on social media audiences can be found [here](https://studioaps.in/best-ways-to-use-social-media-to-promote-online-gaming/#promote-gaming-toc-1b) |
 |3|As a user, I would like to be able to share my result to Instagram so that I can brag about my score to my peers|W|Did not implement|In comparison to Facebook's and X's average user base, Instagram's user's does not fit the casual nature of Click It! More information on social media audiences can be found [here](https://studioaps.in/best-ways-to-use-social-media-to-promote-online-gaming/#promote-gaming-toc-1b) |
-|4|As a user, I would like instructions on how to play the game when I visit the site so I know how to play the game.|M|![user story evidence](assests/imgs/readmeimgs/evid-us4.png)|To make the bridge the gap in non-intuitive part of the game. |
+|4|As a user, I would like instructions on how to play the game when I visit the site so I know how to play the game.|M|![user story evidence](assests/imgs/readmeimgs/evid-us4.png)|To bridge the gap for the non-intuitive part(s) of the game. |
 |5|As a user, I would like to have access to the instruction at any point in the game so I can have their questions on how to play the game answered at any time.|M|![user story evidence](assests/imgs/readmeimgs/evid-us4.png)||
-|6|As a user, I would like to know my score at any time so I can track my progress.|M|![user story evidence](assests/imgs/readmeimgs/evid-us6.png)| To aid in the competitive feeling on the game.|
-|7|As a user, I would like to track my highest score of all time so I can see my progress a sa player.|W|DID not implement|This will not be implemented due to technical restrictions.|
-|8|As a user, I would like to know my highest score of my current play session so I can see my progress as a player|C|Did not implement|Not critical to game functionality but has the potential of increase player enjoyment.|
+|6|As a user, I would like to know my score at any time so I can track my progress.|M|![user story evidence](assests/imgs/readmeimgs/evid-us6.png)| To aid in the competitive feeling of the game.|
+|7|As a user, I would like to track my highest score of all time so I can see my progress a sa player.|W|Did not implement|This will not be implemented due to technical restrictions.|
+|8|As a user, I would like to know my highest score of my current play session so I can see my progress as a player|C|Did not implement|Not critical to game functionality but has the potential of increasing player enjoyment.|
 |9|As a user, I would like to be able to change the theme my game is rendered in so I can have characters and imagery which suits my personal atheistic better.|C|Did not implement|Not critical to game functionality however could increase player interest in addition to creating the possibility of monetized additional themes|
 |10|As a user, I would like to know when I have lost the game so I know when and why my score has been reset|M|![user story evidence](assests/imgs/readmeimgs/evid-us10.png)||
 |11|As a user, I would to be able to play multiple games in a play session so I can improve my game play.|M|![user story evidence](assests/imgs/readmeimgs/evid-us11.png)||
@@ -41,13 +41,13 @@ As the sole developer of this website, my goal is to create an intuitive experie
 This section will outline and justify design choices. 
 
 #### Themes
-The first theme for CLick It! and its default them is going to base around the animal kingdom. As an easily recognizable theme to all ages groups it should give players a sense of familiarity. In addition to being a theme with good access to copyright free media and support materials. 
+The first theme for Click It! and it's default theme is going to base around the animal kingdom. As an easily recognizable theme to all ages groups it should give players a sense of familiarity. In addition to being a theme with good access to copyright free media and support materials. 
 
 #### Colors
 The color scheme for the site will be as follows: 
 ![Color pallet Image](assests/imgs/readmeimgs/Color-ClickIt-colors.jpeg)
 
-This color pallet gives a good coverage of background and text color combination which pass contrast tests. In addition the Greens and other neutral colors support the animal kingdom theme. 
+This color pallet gives a good coverage of background and text color combination which pass contrast tests. Also, the greens and other neutral colors support the animal kingdom theme. 
 
 In addition to color pallet above, the main button colors for the user interface with the game mechanics will be as follows:
 ![Color pallet for buttons image](assests/imgs/readmeimgs/clickit-button-color.jpeg)
@@ -68,7 +68,7 @@ For the sharing features Click It! will be using:
 - https://fontawesome.com/icons/square-x-twitter?f=brands&s=solid
 
 
-### Wireframes
+## Wireframes
 Click It!'s design is based of a simple main game screen, with 3 pop-up variants. A full copy of this project's wireframes can be found [here](assests/imgs/readmeimgs/clickitWireframes.pdf).
 
 #### Main Game Screen
@@ -83,22 +83,20 @@ This shows once the document is ready and is the first thing the user sees. It g
 
 #### Setting Page
 ![Setting page wireframe](assests/imgs/readmeimgs/settingPage.png)
-To aid in player ease, the setting page looks very similar to the welcome page. It explains to rules of the game. In addition to a form of check boxes, allowing the user increase or decrease difficulty.
+To aid in player ease, the setting page looks very similar to the welcome page. It explains to rules of the game. In addition to a form of check boxes, allowing the users to both increase or decrease game difficulty.
 
 #### Game Over Page
 ![Game Over Page wireframe](assests/imgs/readmeimgs/gameOverPage.png)
-A simple page inverse the colors used in all other pop-ups. It use the game button colors to draw attention to the share features built into Click it!. In hopes of encouraging the users to share starting the family competition.  
+A simple page inversing the colors used in all other pop-ups. It uses the game button colors to draw attention to the share features built into Click it!. In hopes of encouraging the users to share, starting the family competition.  
 
 ## Features
-Click It!'s feature set is informed by the above users story and where appropriate will be linked back to a user stroy by referencing the stroy's ID. 
+Click It!'s feature set is informed by the above users story and where appropriate will be linked back to a user story by referencing the story's ID. 
 ### Existing Features
 - Welcome Instructions Screen Pop-up (*User Story ID: 4*)
     - Happens on document loading
     - Contains instructions on how to play the game
     - Is overlaid the main game screen
-<br>
 ![User Story 4 Image](assests/imgs/readmeimgs/evid-us4.png)
-<br>
 - Main Game (*User Story ID: 6, 8, 10, 11, 14*)
     - Starts on new game button press
     - consists of a computer turn and player turn until player makes an incorrect move
