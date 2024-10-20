@@ -104,32 +104,22 @@ Click It!'s feature set is informed by the above users story and where appropria
         - Player turn: user inputs what they believe is current sequence
     - Game ends when player inputs current move
     - Increase score by one each successful player turn
-<br>
 ![User Story 6 Image](assests/imgs/readmeimgs/evid-us6.png)
-<br>
 ![User Story 10 Image](assests/imgs/readmeimgs/evid-us10.png)
-<br>
 ![User Story 11 Image](assests/imgs/readmeimgs/evid-us11.png)
-<br>
 ![User Story 14 Image](assests/imgs/readmeimgs/evid-us14.png)
-<br>
 - Score sharing (*User Story ID: 1, 2, 3, 12*)
     - opportunity to share given to players at the end of each session
     - will give options of facebook and email sharing
     - shared post will include as much Click It branding as possible
     - Will include score achieved
-<br>
 ![User Story 1 Image](assests/imgs/readmeimgs/evid-us1.png)
-<br>
 ![User Story 12 Image](assests/imgs/readmeimgs/evid-us12.png)
-<br>
 - Instructions/Settings (*User Story ID: 5, 15*)
     - will be a pop-up that overlays over main game screen
     - will show instructions on how to play the game
     - will user to change difficulty
-<br>
 ![User Story 5 Image](assests/imgs/readmeimgs/evid-us5.png)
-<br>
 
 ### Features Left to Implement
 - Welcome Instructions Screen Pop-up (*User Story ID: 4*)
