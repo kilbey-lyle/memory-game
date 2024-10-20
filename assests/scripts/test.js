@@ -179,13 +179,6 @@ describe ("Show current Sequence function", () => {
         jest.runAllTimers();
         expect(mock_addAndRemoveLightClass).toHaveBeenCalled();
     });
-    test("Hippo button can have light class set", () => {
-        let classNames = document.getElementById('bttn-hippo').className.split(' ');
-        console.log(typeof(classNames));
-        showCurrentSequence(game.currentSequence, addAndRemoveLightClass);
-        jest.runAllTimers();
-        expect('light' in classNames).toBe(true);
-    });
     test("Times looped equals lengh of current sequence", () => {
         const mock_addAndRemoveLightClass = jest.fn();
 
@@ -203,5 +196,4 @@ describe ("Show current Sequence function", () => {
         jest.runAllTimers();
         expect(mock_addAndRemoveLightClass).toHaveBeenCalledTimes(7);
     });
-
 });

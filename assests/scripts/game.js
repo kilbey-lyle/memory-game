@@ -16,7 +16,6 @@ window.onload = function exampleFunction(){
     //Loops through player buttons and add event listeners
     for (let button of document.getElementsByClassName('player-bttn')) {
         button.addEventListener('click', (e) => {
-            //Don't do anything is it is computers turn
             if (!game.isComputerTurn) {
                 player.lastMove = getButtonID(e.target);
                 //Flash button so user knows click was successful
@@ -216,7 +215,6 @@ function gameOver () {
 
     $('#game-over').modal('show');
 }
-
 
 
 /**
